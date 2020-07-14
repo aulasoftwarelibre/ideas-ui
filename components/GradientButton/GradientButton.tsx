@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./GradientButton.css";
-
 export interface Props {
   onClick?: () => void;
 }

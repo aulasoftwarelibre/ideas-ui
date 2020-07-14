@@ -1,6 +1,5 @@
 import React from "react";
 
-import { storiesOf } from "@storybook/react";
 import { text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
@@ -12,7 +11,7 @@ export default {
 };
 
 export const Default = () => (
-  <GradientButton onClick={action("clicked")} >
-      {text("Text", "Gradient Button")}
+  <GradientButton onClick={action("clicked")}>
+    {text("Text", "Gradient Button")}
   </GradientButton>
-)
+);
