@@ -6,11 +6,7 @@ import GradientButton from "./GradientButton";
 describe("GradientButton", () => {
   const onClickMock = jest.fn();
   const component = shallow(
-    <GradientButton
-      onClick={onClickMock}
-    >
-    Gradient Button 
-    </GradientButton>
+    <GradientButton onClick={onClickMock}>Gradient Button</GradientButton>
   );
 
   it("should be rendered correctly", () => {

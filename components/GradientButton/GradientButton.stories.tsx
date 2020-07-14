@@ -13,6 +13,6 @@ export default {
 
 export const Default = () => (
   <GradientButton onClick={action("clicked")} >
-      {text("Text", "I am a button")}
+      {text("Text", "Gradient Button")}
   </GradientButton>
 )

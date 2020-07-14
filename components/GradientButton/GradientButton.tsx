@@ -12,7 +12,7 @@ export const GradientButton: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <button
-      className="bg-red hover:bg-regal-blue text-white font-bold py-2 px-4 rounded"
+      className="bg-gradient-l-gorange hover:bg-none hover:bg-gray text-white font-bold py-5 px-10 rounded-full"
       onClick={onClick}
     >
       {children}

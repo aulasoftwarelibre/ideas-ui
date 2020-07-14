@@ -3,8 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        red: "#f00",
-        blue: "#00f",
+        orange: "#ff8a00",
+        gray: "#5c5c5c",
+        gorange: ["#ffc000", "#ff8a00"],
       },
       linearGradientColors: (theme) => theme("colors"),
       radialGradientColors: (theme) => theme("colors"),
@@ -13,6 +14,7 @@ module.exports = {
   },
   variants: {
     backgroundColor: ["responsive", "hover", "focus"],
+    backgroundImage: ["hover", "responsive"],
   },
   plugins: [require("tailwindcss-gradients")],
 };
