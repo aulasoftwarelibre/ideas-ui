@@ -2,6 +2,9 @@ module.exports = {
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        xl: "1500px",
+      },
       colors: {
         orange: "#ff8a00",
         gray: "#5c5c5c",
