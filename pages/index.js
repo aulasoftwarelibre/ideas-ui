@@ -1,4 +1,6 @@
-import Head from 'next/head'
+import Head from "next/head";
+
+import { GradientButton } from "../components/GradientButton/GradientButton";
 
 export default function Home() {
   return (
@@ -6,6 +8,8 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+
+        <GradientButton>Hello World</GradientButton>
       </Head>
 
       <main>
@@ -54,7 +58,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -205,5 +209,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
