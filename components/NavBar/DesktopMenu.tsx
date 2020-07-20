@@ -1,7 +1,13 @@
 import React from "react";
 import GradientButton from "../GradientButton";
 
-export const DesktopMenu: React.FunctionComponent = () => {
+interface Props {
+  hideMenu: boolean,
+  clickHandler: any
+};
+
+
+export const DesktopMenu: React.FunctionComponent<Props> = ({hideMenu, clickHandler}) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
@@ -15,7 +21,7 @@ export const DesktopMenu: React.FunctionComponent = () => {
           </a>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
-          <button
+          <button onClick={clickHandler}
             type="button"
             className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
           >

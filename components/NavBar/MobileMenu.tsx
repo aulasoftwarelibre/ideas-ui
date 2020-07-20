@@ -1,9 +1,29 @@
 import React from "react";
 import GradientButton from "../GradientButton";
+import classnames from 'classnames';
 
-export const MobileMenu: React.FunctionComponent = () => {
+interface Props {
+  hideMenu: boolean,
+  clickHandler: any
+};
+
+export const MobileMenu: React.FunctionComponent<Props> = ({hideMenu, clickHandler}) => {
+
+  let state = classnames(
+    'absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden',
+    {hidden: hideMenu}
+  )  
+
+  React.useEffect(() => {
+    state = classnames(
+      'absolute top-0 inset-x-0 p-2 transition transform origin-top-right',
+    ); 
+    console.debug(state);
+  }, [hideMenu, state])
+
+
   return (
-    <div className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+    <div className={state}>
       <div className="rounded-lg shadow-lg">
         <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
           <div className="pt-5 pb-6 px-5 space-y-6">
@@ -17,6 +37,7 @@ export const MobileMenu: React.FunctionComponent = () => {
               </div>
               <div className="-mr-2">
                 <button
+                  onClick={clickHandler}
                   type="button"
                   className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
                 >
