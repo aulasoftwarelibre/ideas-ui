@@ -1,5 +1,7 @@
 import React from "react";
 import GradientButton from "../GradientButton";
+import Link from 'next/link';
+import { useRouter } from 'next/router'
 
 interface Props {
   hideMenu: boolean,
@@ -8,6 +10,14 @@ interface Props {
 
 
 export const DesktopMenu: React.FunctionComponent<Props> = ({hideMenu, clickHandler}) => {
+
+  const router = useRouter();
+
+  console.debug(router.pathname);
+  
+  const activeClass = 'border-solid border-b border-orange';
+  const linkClass = 'text-base text-orange leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150';
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
@@ -41,24 +51,27 @@ export const DesktopMenu: React.FunctionComponent<Props> = ({hideMenu, clickHand
           </button>
         </div>
         <nav className="hidden md:flex space-x-10">
+          <Link href="/">
+            <a
+              className={`${router.pathname == '/' ? activeClass : ''} ${linkClass}`}
+            >
+              Inicio
+            </a>
+          </Link>
+          <Link href="/groups">
           <a
-            href="#"
-            className="border-solid border-b border-orange text-base text-orange leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
-          >
-            Inicio
-          </a>
-          <a
-            href="#"
-            className="text-base text-orange leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          className={`${router.pathname == '/groups' ? activeClass : ''} ${linkClass}`}
           >
             Organizaciones
           </a>
+          </Link>
+          <Link href="/help">
           <a
-            href="#"
-            className="text-base text-orange leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+          className={`${router.pathname == '/help' ? activeClass : ''} ${linkClass}`}
           >
             Ayuda
           </a>
+          </Link>
         </nav>
         <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
           <GradientButton>Iniciar sesión</GradientButton>
