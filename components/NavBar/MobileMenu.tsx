@@ -1,26 +1,29 @@
 import React from "react";
 import GradientButton from "../GradientButton";
-import classnames from 'classnames';
+import classnames from "classnames";
+import MobileLink from "./MobileLink";
+import Link from "next/link";
 
 interface Props {
-  hideMenu: boolean,
-  clickHandler: any
-};
+  hideMenu: boolean;
+  clickHandler: any;
+}
 
-export const MobileMenu: React.FunctionComponent<Props> = ({hideMenu, clickHandler}) => {
-
+export const MobileMenu: React.FunctionComponent<Props> = ({
+  hideMenu,
+  clickHandler,
+}) => {
   let state = classnames(
-    'absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden',
-    {hidden: hideMenu}
-  )  
+    "absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden",
+    { hidden: hideMenu }
+  );
 
   React.useEffect(() => {
     state = classnames(
-      'absolute top-0 inset-x-0 p-2 transition transform origin-top-right',
-    ); 
+      "absolute top-0 inset-x-0 p-2 transition transform origin-top-right"
+    );
     console.debug(state);
-  }, [hideMenu, state])
-
+  }, [hideMenu, state]);
 
   return (
     <div className={state}>
@@ -28,13 +31,15 @@ export const MobileMenu: React.FunctionComponent<Props> = ({hideMenu, clickHandl
         <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
           <div className="pt-5 pb-6 px-5 space-y-6">
             <div className="flex items-center justify-between">
-              <div>
-                <img
-                  className="h-8 w-auto"
-                  src="/logotipo-completo-degradado.svg"
-                  alt="Workflow"
-                />
-              </div>
+              <Link href="/">
+                <a>
+                  <img
+                    className="h-8 w-auto sm:h-16"
+                    src="/logotipo-completo-degradado.svg"
+                    alt="Workflow"
+                  />
+                </a>
+              </Link>
               <div className="-mr-2">
                 <button
                   onClick={clickHandler}
@@ -59,30 +64,9 @@ export const MobileMenu: React.FunctionComponent<Props> = ({hideMenu, clickHandl
             </div>
             <div>
               <nav className="grid row-gap-8">
-                <a
-                  href="#"
-                  className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
-                >
-                  <div className="text-base leading-6 font-medium text-gray-900">
-                    Inicio
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
-                >
-                  <div className="text-base leading-6 font-medium text-gray-900">
-                    Organizaciones
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="-m-3 p-3 flex items-center space-x-3 rounded-md hover:bg-gray-50 transition ease-in-out duration-150"
-                >
-                  <div className="text-base leading-6 font-medium text-gray-900">
-                    Ayuda
-                  </div>
-                </a>
+                <MobileLink title="Inicio" path="/"></MobileLink>
+                <MobileLink title="Grupos" path="/groups"></MobileLink>
+                <MobileLink title="Ayuda" path="/help"></MobileLink>
               </nav>
             </div>
           </div>

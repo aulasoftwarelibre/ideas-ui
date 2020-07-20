@@ -7,8 +7,11 @@ export const NavBar: React.FunctionComponent = () => {
 
   return (
     <div className="relative bg-white">
-      <DesktopMenu hideMenu={hideMenu} clickHandler={() => setMenu(!hideMenu)}></DesktopMenu>
-      <MobileMenu hideMenu={hideMenu} clickHandler={() => setMenu(!hideMenu)}></MobileMenu>
+      <DesktopMenu clickHandler={() => setMenu(!hideMenu)}></DesktopMenu>
+      <MobileMenu
+        hideMenu={hideMenu}
+        clickHandler={() => setMenu(!hideMenu)}
+      ></MobileMenu>
     </div>
   );
 };
