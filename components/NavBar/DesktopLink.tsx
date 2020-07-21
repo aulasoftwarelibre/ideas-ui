@@ -14,17 +14,20 @@ export const DesktopLink: React.FunctionComponent<Props> = ({
   const router = useRouter();
 
   const isActive: boolean = router.pathname == path;
-  const activeClass = "border-solid border-b-2 border-orange";
-  const linkClass =
-    "text-base text-orange leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150";
 
   if (isActive) {
-    return <span className={`${activeClass} ${linkClass}`}>{title}</span>;
+    return (
+      <span className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange">
+        {title}
+      </span>
+    );
   }
 
   return (
     <Link href={path}>
-      <a className={`${linkClass}`}>{title}</a>
+      <a className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-white hover:border-ideaOrange">
+        {title}
+      </a>
     </Link>
   );
 };

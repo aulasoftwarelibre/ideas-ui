@@ -6,8 +6,7 @@ module.exports = {
         xl: "1500px",
       },
       colors: {
-        orange: "#ff8a00",
-        gray: "#5c5c5c",
+        ideaOrange: "#ff8a00",
         gorange: ["#ffc000", "#ff8a00"],
       },
       linearGradientColors: (theme) => theme("colors"),
