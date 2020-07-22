@@ -67,12 +67,12 @@ export const DesktopMenu: React.FunctionComponent<Props> = ({
           <div className="flex-shrink-0">
             <img
               className="block lg:hidden h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-mark-on-dark.svg"
+              src="/ideas-isotipo-naranja.svg"
               alt="Workflow logo"
             />
             <img
               className="hidden lg:block h-8 w-auto"
-              src="https://tailwindui.com/img/logos/workflow-logo-on-dark.svg"
+              src="/ideas-imagotipo-naranja.svg"
               alt="Workflow logo"
             />
           </div>
