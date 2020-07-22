@@ -85,7 +85,7 @@ export const DesktopMenu: React.FunctionComponent<Props> = ({
           </div>
         </div>
         <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <div className="ml-3 relative">
+          <div className="relative">
             <div>
               <button
                 className="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
@@ -134,6 +134,7 @@ export const DesktopMenu: React.FunctionComponent<Props> = ({
               </div>
             </div>
           </div>
+          <GradientButton>Add idea</GradientButton>
         </div>
       </div>
     </div>
