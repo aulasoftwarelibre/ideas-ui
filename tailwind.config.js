@@ -17,6 +17,16 @@ module.exports = {
       radialGradientColors: (theme) => theme("colors"),
       conicGradientColors: (theme) => theme("colors"),
     },
+    borderRadius: {
+      none: "0",
+      sm: "0.125rem",
+      default: "0.25rem",
+      default: "4px",
+      md: "0.375rem",
+      lg: "0.5rem",
+      full: "9999px",
+      large: "12px",
+    },
   },
   variants: {
     backgroundColor: ["responsive", "hover", "focus"],
