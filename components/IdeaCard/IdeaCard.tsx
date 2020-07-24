@@ -1,23 +1,14 @@
 import React from "react";
 import classnames from "classnames";
+import { Idea } from "../../model/idea/idea";
 
 export interface Props {
-  title: string;
-  group: string;
-  category: string;
-  image?: string;
-  starts_at: Date;
-  online: Boolean;
+  idea: Idea;
   onClick?: () => void;
 }
 
-export const ActivityCard: React.FunctionComponent<Props> = ({
-  title,
-  group,
-  category,
-  image,
-  starts_at,
-  online,
+export const IdeaCard: React.FunctionComponent<Props> = ({
+  idea,
   onClick,
 }) => {
   return (
@@ -28,32 +19,34 @@ export const ActivityCard: React.FunctionComponent<Props> = ({
       <div
         className="flex h-56 bg-cover bg-center"
         style={{
-          backgroundImage: "url('" + image + "')",
+          backgroundImage: "url('" + idea.image + "')",
         }}
       >
         <div className="p-4 flex-col items-end text-white mt-auto">
-          <h4 className="font-bold text-lightgray text-base">{category}</h4>
-          <h3 className="font-bold text-white text-2xl">{title}</h3>
+          <h4 className="font-bold text-lightgray text-base">
+            {idea.category}
+          </h4>
+          <h3 className="font-bold text-white text-2xl">{idea.title}</h3>
         </div>
         <div className="flex-col items-end text-white mb-auto ml-auto">
           <div
             className={classnames(
               "h-10 px-4 py-1 bg-gradient-l-primary-to-light rounded-tr-large rounded-bl-large",
-              { "w-24": online },
-              { "w-32": !online }
+              { "w-24": idea.online },
+              { "w-32": !idea.online }
             )}
           >
             <p className="font-bold text-white text-xl">
-              {online ? "Online" : "Presencial"}
+              {idea.online ? "Online" : "Presencial"}
             </p>
           </div>
         </div>
       </div>
       <div className="px-5 py-4 bg-gradient-l-primary-to-light">
         <div className="font-bold text-white text-xl">
-          {starts_at.toUTCString()}
+          {idea.startsAt.toUTCString()}
         </div>
-        <div className="font-bold text-white text-sm mb-2">{group}</div>
+        <div className="font-bold text-white text-sm mb-2">{idea.group}</div>
         <div className="flex overflow-hidden">
           <img
             className="inline-block h-8 w-8 rounded-full text-white shadow-solid"
@@ -82,4 +75,4 @@ export const ActivityCard: React.FunctionComponent<Props> = ({
   );
 };
 
-export default ActivityCard;
+export default IdeaCard;
