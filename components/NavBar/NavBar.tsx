@@ -1,20 +1,24 @@
-import React from "react";
-import DesktopMenu from "./DesktopMenu";
-import { MobileMenu } from "./MobileMenu";
-import { useSession } from "next-auth/client";
+import Link from 'next/link';
+import React from 'react';
 
-import { Session } from "../../model/user/auth";
-import GradientButton from "../GradientButton";
-import UserMenu from "./UserMenu";
-import Link from "next/link";
+import { Session } from '../../model/user/auth';
+import useNavBar from '../../state/navbar/useNavBar';
+import GradientButton from '../GradientButton';
+import DesktopMenu from './DesktopMenu';
+import { MobileMenu } from './MobileMenu';
+import UserMenu from './UserMenu';
 
 interface Props {
   session: Session;
 }
 
 export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
-  const [hideMenu, setMenu] = React.useState(true);
-  const [hideProfile, setProfile] = React.useState(true);
+  const {
+    hideMenu,
+    hideProfile,
+    changeProfileVisibility,
+    changeMenuVisibility,
+  } = useNavBar();
 
   return (
     <nav className="bg-white">
@@ -22,7 +26,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
         <div className="relative flex items-center justify-between h-16">
           <DesktopMenu
             hideMenu={hideMenu}
-            closeMenuHandler={() => setMenu(!hideMenu)}
+            closeMenuHandler={() => changeMenuVisibility()}
           ></DesktopMenu>
           {!session && (
             <Link href="/api/auth/signin">
@@ -34,7 +38,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
               <UserMenu
                 session={session}
                 hideMenu={hideProfile}
-                onClick={() => setProfile(!hideProfile)}
+                onClick={() => changeProfileVisibility()}
               />
               <GradientButton>Añadir idea</GradientButton>
             </>
@@ -43,7 +47,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
       </div>
       <MobileMenu
         hideMenu={hideMenu}
-        closeMenuHandler={() => setMenu(!hideMenu)}
+        closeMenuHandler={() => changeMenuVisibility()}
       ></MobileMenu>
     </nav>
   );
