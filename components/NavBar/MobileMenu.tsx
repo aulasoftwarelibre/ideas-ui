@@ -23,7 +23,7 @@ export const MobileMenu: React.FunctionComponent<Props> = ({
     <div className={state}>
       <div className="px-2 pt-2 pb-3 bg-white">
         <MobileLink title="Inicio" path="/"></MobileLink>
-        <MobileLink title="Organizaciones" path="/groups"></MobileLink>
+        <MobileLink title="Grupos" path="/groups"></MobileLink>
         <MobileLink title="Ayuda" path="/help"></MobileLink>
       </div>
     </div>
