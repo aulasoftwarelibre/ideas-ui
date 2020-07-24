@@ -31,6 +31,7 @@ module.exports = {
   variants: {
     backgroundColor: ["responsive", "hover", "focus"],
     backgroundImage: ["hover", "responsive"],
+    margin: ["responsive", "first"]
   },
   plugins: [require("tailwindcss-gradients"), require("@tailwindcss/ui")],
 };

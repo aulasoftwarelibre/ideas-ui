@@ -20,7 +20,7 @@ const idea: Idea = {
   category: "Category",
   startsAt: new Date(todayDate),
   online: true,
-  attendess: [],
+  attendess: [{}, {}, {}, {}, {}],
   image: "https://source.unsplash.com/featured/?tech",
 };
 
@@ -29,5 +29,8 @@ export const Online = () => (
 );
 
 export const Presencial = () => (
-  <IdeaCard idea={object("Idea", {...idea, online:false})} onClick={action("clicked")}></IdeaCard>
+  <IdeaCard
+    idea={object("Idea", { ...idea, online: false })}
+    onClick={action("clicked")}
+  ></IdeaCard>
 );

@@ -1,16 +1,16 @@
 import React from "react";
 import classnames from "classnames";
 import { Idea } from "../../model/idea/idea";
+import IdeaAvatarList from "./IdeaAvatarList";
 
 export interface Props {
   idea: Idea;
   onClick?: () => void;
 }
 
-export const IdeaCard: React.FunctionComponent<Props> = ({
-  idea,
-  onClick,
-}) => {
+export const IdeaCard: React.FunctionComponent<Props> = ({ idea, onClick }) => {
+  const ideaImage = idea.image ?? "/ideas-banner.png";
+
   return (
     <div
       className="h-auto max-w-sm rounded-large overflow-hidden shadow-lg "
@@ -19,7 +19,7 @@ export const IdeaCard: React.FunctionComponent<Props> = ({
       <div
         className="flex h-56 bg-cover bg-center"
         style={{
-          backgroundImage: "url('" + idea.image + "')",
+          backgroundImage: `linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(0, 0, 0, 1)), url(${ideaImage})`,
         }}
       >
         <div className="p-4 flex-col items-end text-white mt-auto">
@@ -47,29 +47,7 @@ export const IdeaCard: React.FunctionComponent<Props> = ({
           {idea.startsAt.toUTCString()}
         </div>
         <div className="font-bold text-white text-sm mb-2">{idea.group}</div>
-        <div className="flex overflow-hidden">
-          <img
-            className="inline-block h-8 w-8 rounded-full text-white shadow-solid"
-            src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
-          <img
-            className="-ml-2 inline-block h-8 w-8 rounded-full text-white shadow-solid"
-            src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
-          <img
-            className="-ml-2 inline-block h-8 w-8 rounded-full text-white shadow-solid"
-            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-            alt=""
-          />
-          <img
-            className="-ml-2 inline-block h-8 w-8 rounded-full text-white shadow-solid"
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-            alt=""
-          />
-          <div className="font-bold text-white text-base ml-3 mt-1">23</div>
-        </div>
+        <IdeaAvatarList attendess={idea.attendess}></IdeaAvatarList>
       </div>
     </div>
   );
