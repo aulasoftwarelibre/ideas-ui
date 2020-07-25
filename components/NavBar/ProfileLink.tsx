@@ -1,16 +1,19 @@
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from 'next/link';
+import { NextRouter, withRouter } from 'next/router';
+import React from 'react';
 
 interface Props {
-  title: string;
   path: string;
+  label: string;
+  router: NextRouter;
 }
 
-export const UserLink: React.FunctionComponent<Props> = ({ title, path }) => {
-  const router = useRouter();
-
-  const isActive: boolean = router.pathname == path;
+export const ProfileLink: React.FunctionComponent<Props> = ({
+  path,
+  label,
+  router,
+}) => {
+  const isActive = router.pathname === path;
 
   if (isActive) {
     return (
@@ -18,7 +21,7 @@ export const UserLink: React.FunctionComponent<Props> = ({ title, path }) => {
         className="block px-4 py-2 text-sm leading-5 font-black text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
         role="menuitem"
       >
-        {title}
+        {label}
       </span>
     );
   }
@@ -29,10 +32,10 @@ export const UserLink: React.FunctionComponent<Props> = ({ title, path }) => {
         className="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
         role="menuitem"
       >
-        {title}
+        {label}
       </a>
     </Link>
   );
 };
 
-export default UserLink;
+export default withRouter(ProfileLink);

@@ -1,8 +1,9 @@
-import React from "react";
-import classnames from "classnames";
+import classnames from 'classnames';
+import React from 'react';
 
-import { Session } from "../../model/user/auth";
-import UserLink from "./UserLink";
+import { profileLinks } from '../../config/links';
+import { Session } from '../../model/user/auth';
+import ProfileLink from './ProfileLink';
 
 interface Props {
   session: Session;
@@ -10,7 +11,7 @@ interface Props {
   onClick: () => void;
 }
 
-export const UserMenu: React.FunctionComponent<Props> = ({
+export const ProfileMenu: React.FunctionComponent<Props> = ({
   session,
   hideMenu,
   onClick,
@@ -44,9 +45,13 @@ export const UserMenu: React.FunctionComponent<Props> = ({
                 aria-orientation="vertical"
                 aria-labelledby="user-menu"
               >
-                <UserLink title="Editar perfil" path="/user/profile" />
-                <UserLink title="Actividades" path="/user/activities" />
-                <UserLink title="Salir" path="/api/auth/signout" />
+                {profileLinks.map((link) => (
+                  <ProfileLink
+                    key={link.path}
+                    path={link.path}
+                    label={link.label}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -56,4 +61,4 @@ export const UserMenu: React.FunctionComponent<Props> = ({
   );
 };
 
-export default UserMenu;
+export default ProfileMenu;

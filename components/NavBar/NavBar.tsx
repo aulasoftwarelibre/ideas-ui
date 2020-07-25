@@ -6,7 +6,7 @@ import useNavBar from '../../state/navbar/useNavBar';
 import GradientButton from '../GradientButton';
 import DesktopMenu from './DesktopMenu';
 import { MobileMenu } from './MobileMenu';
-import UserMenu from './UserMenu';
+import ProfileMenu from './ProfileMenu';
 
 interface Props {
   session: Session;
@@ -35,7 +35,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
           )}
           {session && (
             <>
-              <UserMenu
+              <ProfileMenu
                 session={session}
                 hideMenu={hideProfile}
                 onClick={() => changeProfileVisibility()}
