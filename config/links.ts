@@ -3,6 +3,21 @@ export interface NavBarLink {
   path: string;
 }
 
+export const menuLinks: NavBarLink[] = [
+  {
+    label: "Inicio",
+    path: "/",
+  },
+  {
+    label: "Grupos",
+    path: "/groups",
+  },
+  {
+    label: "Ayuda",
+    path: "/help",
+  },
+];
+
 export const mobileLinks: NavBarLink[] = [
   {
     label: "Inicio",

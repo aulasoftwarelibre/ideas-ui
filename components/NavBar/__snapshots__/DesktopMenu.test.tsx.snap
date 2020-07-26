@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DesktopMenu should be rendered with active link 1`] = `
+<DocumentFragment>
+  <div
+    class="hidden sm:block sm:ml-6"
+  >
+    <div
+      class="flex"
+    >
+      <span
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+      >
+        Inicio
+      </span>
+      <a
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        href="/groups"
+      >
+        Grupos
+      </a>
+      <a
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        href="/help"
+      >
+        Ayuda
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DesktopMenu should be rendered without active link 1`] = `
+<DocumentFragment>
+  <div
+    class="hidden sm:block sm:ml-6"
+  >
+    <div
+      class="flex"
+    >
+      <a
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        href="/"
+      >
+        Inicio
+      </a>
+      <a
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        href="/groups"
+      >
+        Grupos
+      </a>
+      <a
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        href="/help"
+      >
+        Ayuda
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
