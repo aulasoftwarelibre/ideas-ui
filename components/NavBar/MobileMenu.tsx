@@ -1,8 +1,8 @@
-import React from "react";
-import GradientButton from "../GradientButton";
-import classnames from "classnames";
-import MobileLink from "./MobileLink";
-import Link from "next/link";
+import classnames from 'classnames';
+import React from 'react';
+
+import { mobileLinks } from '../../config/links';
+import MobileLink from './MobileLink';
 
 interface Props {
   hideMenu: boolean;
@@ -22,9 +22,13 @@ export const MobileMenu: React.FunctionComponent<Props> = ({
   return (
     <div className={state}>
       <div className="px-2 pt-2 pb-3 bg-white">
-        <MobileLink title="Inicio" path="/"></MobileLink>
-        <MobileLink title="Grupos" path="/groups"></MobileLink>
-        <MobileLink title="Ayuda" path="/help"></MobileLink>
+        {mobileLinks.map((link) => (
+          <MobileLink
+            key={link.path}
+            path={link.path}
+            label={link.label}
+          ></MobileLink>
+        ))}
       </div>
     </div>
   );

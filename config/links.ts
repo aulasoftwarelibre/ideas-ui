@@ -3,6 +3,25 @@ export interface NavBarLink {
   path: string;
 }
 
+export const mobileLinks: NavBarLink[] = [
+  {
+    label: "Inicio",
+    path: "/",
+  },
+  {
+    label: "Grupos",
+    path: "/groups",
+  },
+  {
+    label: "Añadir idea",
+    path: "/ideas/new",
+  },
+  {
+    label: "Ayuda",
+    path: "/help",
+  },
+];
+
 export const profileLinks: NavBarLink[] = [
   {
     label: "Editar perfil",
