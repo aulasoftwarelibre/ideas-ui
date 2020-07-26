@@ -1,6 +1,7 @@
-import React from "react";
-import classnames from "classnames";
-import DesktopLink from "./DesktopLink";
+import classnames from 'classnames';
+import React from 'react';
+
+import DesktopLink from './DesktopLink';
 
 interface Props {
   hideMenu: boolean;
@@ -71,9 +72,9 @@ export const DesktopMenu: React.FunctionComponent<Props> = ({
         </div>
         <div className="hidden sm:block sm:ml-6">
           <div className="flex">
-            <DesktopLink title="Inicio" path="/"></DesktopLink>
-            <DesktopLink title="Grupos" path="/groups"></DesktopLink>
-            <DesktopLink title="Ayuda" path="/help"></DesktopLink>
+            <DesktopLink label="Inicio" path="/"></DesktopLink>
+            <DesktopLink label="Grupos" path="/groups"></DesktopLink>
+            <DesktopLink label="Ayuda" path="/help"></DesktopLink>
           </div>
         </div>
       </div>

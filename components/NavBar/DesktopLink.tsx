@@ -1,35 +1,35 @@
-import React from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
+import Link from 'next/link';
+import { NextRouter, withRouter } from 'next/router';
+import React from 'react';
 
 interface Props {
-  title: string;
+  label: string;
   path: string;
+  router: NextRouter;
 }
 
-export const DesktopLink: React.FunctionComponent<Props> = ({
-  title,
+const DesktopLink: React.FunctionComponent<Props> = ({
+  label,
   path,
+  router,
 }) => {
-  const router = useRouter();
-
-  const isActive: boolean = router.pathname == path;
+  const isActive: boolean = router.pathname === path;
 
   if (isActive) {
     return (
       <span className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange">
-        {title}
+        {label}
       </span>
     );
   }
 
   return (
     <Link href={path}>
-      <a className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-white hover:border-ideaOrange">
-        {title}
+      <a className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange">
+        {label}
       </a>
     </Link>
   );
 };
 
-export default DesktopLink;
+export default withRouter(DesktopLink);
