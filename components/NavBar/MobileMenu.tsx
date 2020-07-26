@@ -6,13 +6,9 @@ import MobileLink from './MobileLink';
 
 interface Props {
   hideMenu: boolean;
-  closeMenuHandler: any;
 }
 
-export const MobileMenu: React.FunctionComponent<Props> = ({
-  hideMenu,
-  closeMenuHandler: clickHandler,
-}) => {
+export const MobileMenu: React.FunctionComponent<Props> = ({ hideMenu }) => {
   let state = classnames(
     "sm:hidden",
     { hidden: hideMenu },
