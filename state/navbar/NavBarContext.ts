@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { initialState } from './NavBarReducer';
 import { NavBarActions, NavBarState } from './NavBarTypes';

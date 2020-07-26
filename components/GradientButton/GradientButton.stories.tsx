@@ -1,9 +1,8 @@
-import React from "react";
+import { action } from '@storybook/addon-actions';
+import { text } from '@storybook/addon-knobs';
+import React from 'react';
 
-import { text } from "@storybook/addon-knobs";
-import { action } from "@storybook/addon-actions";
-
-import GradientButton from ".";
+import GradientButton from '.';
 
 export default {
   title: "Gradient Button",

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { mountMockRouter, renderMockRouter } from '../../utils/test-utils';
 import MobileLink from './MobileLink';

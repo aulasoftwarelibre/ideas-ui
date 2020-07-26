@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { Session } from '../../model/user/auth';
 import NavBarContext from '../../state/navbar/NavBarContext';

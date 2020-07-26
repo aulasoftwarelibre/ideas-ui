@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import * as React from 'react';
+import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
 import { Session } from '../../model/user/auth';

@@ -12,7 +12,7 @@ export const initialState: NavBarState = {
   hideProfile: true,
 };
 
-export const navbarReducer: Reducer<NavBarState, NavBarActions> = (
+export const reducer: Reducer<NavBarState, NavBarActions> = (
   state = initialState,
   action
 ) => {
@@ -35,4 +35,4 @@ export const navbarReducer: Reducer<NavBarState, NavBarActions> = (
   }
 };
 
-export default navbarReducer;
+export default reducer;

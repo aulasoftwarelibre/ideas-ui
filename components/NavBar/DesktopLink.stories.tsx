@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
 import DesktopLink from './DesktopLink';
