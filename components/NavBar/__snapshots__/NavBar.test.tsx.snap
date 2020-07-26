@@ -1,0 +1,719 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should render with mobile menu open 1`] = `
+<DocumentFragment>
+  <nav
+    class="bg-white"
+  >
+    <div
+      class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"
+    >
+      <div
+        class="relative flex items-center justify-between h-16"
+      >
+        <div
+          class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+        >
+          <button
+            aria-expanded="false"
+            aria-label="Main menu"
+            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+          >
+            <svg
+              class="h-6 w-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <svg
+              class="h-6 w-6 block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+        >
+          <div
+            class="flex-shrink-0"
+          >
+            <img
+              alt="Workflow logo"
+              class="block lg:hidden h-8 w-auto"
+              src="/ideas-isotipo-naranja.svg"
+            />
+            <img
+              alt="Workflow logo"
+              class="hidden lg:block h-8 w-auto"
+              src="/ideas-imagotipo-naranja.svg"
+            />
+          </div>
+          <div
+            class="hidden sm:block sm:ml-6"
+          >
+            <div
+              class="flex"
+            >
+              <span
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+              >
+                Inicio
+              </span>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/groups"
+              >
+                Grupos
+              </a>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/help"
+              >
+                Ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <div
+            class="relative"
+          >
+            <div>
+              <button
+                aria-haspopup="true"
+                aria-label="User menu"
+                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
+                id="user-menu"
+              >
+                <img
+                  alt="user"
+                  class="h-8 w-8 rounded-full"
+                  src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y"
+                />
+              </button>
+            </div>
+            <div
+              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
+            >
+              <div
+                aria-labelledby="user-menu"
+                aria-orientation="vertical"
+                class="py-1 rounded-md bg-white shadow-xs hidden"
+                role="menu"
+              >
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/user/profile"
+                  role="menuitem"
+                >
+                  Editar perfil
+                </a>
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/user/ideas"
+                  role="menuitem"
+                >
+                  Actividades
+                </a>
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/api/auth/signout"
+                  role="menuitem"
+                >
+                  Salir
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="hidden sm:block"
+        >
+          <a
+            href="/idea/add"
+          >
+            <button
+              class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+            >
+              Añadir idea
+            </button>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div
+      class="sm:hidden block"
+    >
+      <div
+        class="px-2 pt-2 pb-3 bg-white"
+      >
+        <span
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        >
+          Inicio
+        </span>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/groups"
+        >
+          Grupos
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/ideas/new"
+        >
+          Añadir idea
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/help"
+        >
+          Ayuda
+        </a>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`NavBar should render with profile menu open 1`] = `
+<DocumentFragment>
+  <nav
+    class="bg-white"
+  >
+    <div
+      class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"
+    >
+      <div
+        class="relative flex items-center justify-between h-16"
+      >
+        <div
+          class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+        >
+          <button
+            aria-expanded="false"
+            aria-label="Main menu"
+            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+          >
+            <svg
+              class="h-6 w-6 block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <svg
+              class="h-6 w-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+        >
+          <div
+            class="flex-shrink-0"
+          >
+            <img
+              alt="Workflow logo"
+              class="block lg:hidden h-8 w-auto"
+              src="/ideas-isotipo-naranja.svg"
+            />
+            <img
+              alt="Workflow logo"
+              class="hidden lg:block h-8 w-auto"
+              src="/ideas-imagotipo-naranja.svg"
+            />
+          </div>
+          <div
+            class="hidden sm:block sm:ml-6"
+          >
+            <div
+              class="flex"
+            >
+              <span
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+              >
+                Inicio
+              </span>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/groups"
+              >
+                Grupos
+              </a>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/help"
+              >
+                Ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <div
+            class="relative"
+          >
+            <div>
+              <button
+                aria-haspopup="true"
+                aria-label="User menu"
+                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
+                id="user-menu"
+              >
+                <img
+                  alt="user"
+                  class="h-8 w-8 rounded-full"
+                  src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y"
+                />
+              </button>
+            </div>
+            <div
+              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
+            >
+              <div
+                aria-labelledby="user-menu"
+                aria-orientation="vertical"
+                class="py-1 rounded-md bg-white shadow-xs"
+                role="menu"
+              >
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/user/profile"
+                  role="menuitem"
+                >
+                  Editar perfil
+                </a>
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/user/ideas"
+                  role="menuitem"
+                >
+                  Actividades
+                </a>
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/api/auth/signout"
+                  role="menuitem"
+                >
+                  Salir
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="hidden sm:block"
+        >
+          <a
+            href="/idea/add"
+          >
+            <button
+              class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+            >
+              Añadir idea
+            </button>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div
+      class="sm:hidden hidden"
+    >
+      <div
+        class="px-2 pt-2 pb-3 bg-white"
+      >
+        <span
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        >
+          Inicio
+        </span>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/groups"
+        >
+          Grupos
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/ideas/new"
+        >
+          Añadir idea
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/help"
+        >
+          Ayuda
+        </a>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`NavBar should render with session 1`] = `
+<DocumentFragment>
+  <nav
+    class="bg-white"
+  >
+    <div
+      class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"
+    >
+      <div
+        class="relative flex items-center justify-between h-16"
+      >
+        <div
+          class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+        >
+          <button
+            aria-expanded="false"
+            aria-label="Main menu"
+            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+          >
+            <svg
+              class="h-6 w-6 block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <svg
+              class="h-6 w-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+        >
+          <div
+            class="flex-shrink-0"
+          >
+            <img
+              alt="Workflow logo"
+              class="block lg:hidden h-8 w-auto"
+              src="/ideas-isotipo-naranja.svg"
+            />
+            <img
+              alt="Workflow logo"
+              class="hidden lg:block h-8 w-auto"
+              src="/ideas-imagotipo-naranja.svg"
+            />
+          </div>
+          <div
+            class="hidden sm:block sm:ml-6"
+          >
+            <div
+              class="flex"
+            >
+              <span
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+              >
+                Inicio
+              </span>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/groups"
+              >
+                Grupos
+              </a>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/help"
+              >
+                Ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+        >
+          <div
+            class="relative"
+          >
+            <div>
+              <button
+                aria-haspopup="true"
+                aria-label="User menu"
+                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
+                id="user-menu"
+              >
+                <img
+                  alt="user"
+                  class="h-8 w-8 rounded-full"
+                  src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y"
+                />
+              </button>
+            </div>
+            <div
+              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
+            >
+              <div
+                aria-labelledby="user-menu"
+                aria-orientation="vertical"
+                class="py-1 rounded-md bg-white shadow-xs hidden"
+                role="menu"
+              >
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/user/profile"
+                  role="menuitem"
+                >
+                  Editar perfil
+                </a>
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/user/ideas"
+                  role="menuitem"
+                >
+                  Actividades
+                </a>
+                <a
+                  class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+                  href="/api/auth/signout"
+                  role="menuitem"
+                >
+                  Salir
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span
+          class="hidden sm:block"
+        >
+          <a
+            href="/idea/add"
+          >
+            <button
+              class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+            >
+              Añadir idea
+            </button>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div
+      class="sm:hidden hidden"
+    >
+      <div
+        class="px-2 pt-2 pb-3 bg-white"
+      >
+        <span
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        >
+          Inicio
+        </span>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/groups"
+        >
+          Grupos
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/ideas/new"
+        >
+          Añadir idea
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/help"
+        >
+          Ayuda
+        </a>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;
+
+exports[`NavBar should render without session 1`] = `
+<DocumentFragment>
+  <nav
+    class="bg-white"
+  >
+    <div
+      class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8"
+    >
+      <div
+        class="relative flex items-center justify-between h-16"
+      >
+        <div
+          class="absolute inset-y-0 left-0 flex items-center sm:hidden"
+        >
+          <button
+            aria-expanded="false"
+            aria-label="Main menu"
+            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+          >
+            <svg
+              class="h-6 w-6 block"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <svg
+              class="h-6 w-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6 18L18 6M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"
+        >
+          <div
+            class="flex-shrink-0"
+          >
+            <img
+              alt="Workflow logo"
+              class="block lg:hidden h-8 w-auto"
+              src="/ideas-isotipo-naranja.svg"
+            />
+            <img
+              alt="Workflow logo"
+              class="hidden lg:block h-8 w-auto"
+              src="/ideas-imagotipo-naranja.svg"
+            />
+          </div>
+          <div
+            class="hidden sm:block sm:ml-6"
+          >
+            <div
+              class="flex"
+            >
+              <span
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+              >
+                Inicio
+              </span>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/groups"
+              >
+                Grupos
+              </a>
+              <a
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                href="/help"
+              >
+                Ayuda
+              </a>
+            </div>
+          </div>
+        </div>
+        <a
+          href="/api/auth/signin"
+        >
+          <button
+            class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+          >
+            Iniciar sesión
+          </button>
+        </a>
+      </div>
+    </div>
+    <div
+      class="sm:hidden hidden"
+    >
+      <div
+        class="px-2 pt-2 pb-3 bg-white"
+      >
+        <span
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        >
+          Inicio
+        </span>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/groups"
+        >
+          Grupos
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/ideas/new"
+        >
+          Añadir idea
+        </a>
+        <a
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          href="/help"
+        >
+          Ayuda
+        </a>
+      </div>
+    </div>
+  </nav>
+</DocumentFragment>
+`;

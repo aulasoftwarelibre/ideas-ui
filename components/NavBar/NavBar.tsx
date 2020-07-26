@@ -85,7 +85,9 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
           </div>
           {!session && (
             <Link href="/api/auth/signin">
-              <GradientButton>Iniciar sesión</GradientButton>
+              <a>
+                <GradientButton>Iniciar sesión</GradientButton>
+              </a>
             </Link>
           )}
           {session && (
@@ -96,7 +98,11 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
                 onClick={() => changeProfileVisibility()}
               />
               <span className="hidden sm:block">
-                <GradientButton>Añadir idea</GradientButton>
+                <Link href="/idea/add" passHref>
+                  <a>
+                    <GradientButton>Añadir idea</GradientButton>
+                  </a>
+                </Link>
               </span>
             </>
           )}
