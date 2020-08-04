@@ -1,14 +1,11 @@
-import NextAuth from "next-auth";
-import Providers from "next-auth/providers";
+import NextAuth from 'next-auth';
+import Providers from 'next-auth/providers';
 
 const options = {
-  site: process.env.SITE || "http://localhost:3000",
-
   // Configure one or more authentication providers
   providers: [
     // TODO: Load this only in dev
     Providers.Credentials({
-      site: "http://localhost:3000",
       name: "Credentials",
       session: {
         jwt: true,
