@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileMenu should be rendered with active link 1`] = `
+<DocumentFragment>
+  <div
+    class="sm:hidden block"
+  >
+    <div
+      class="px-2 pt-2 pb-3 bg-white"
+    >
+      <span
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+      >
+        Inicio
+      </span>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/groups"
+      >
+        Grupos
+      </a>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/ideas/new"
+      >
+        Añadir idea
+      </a>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/help"
+      >
+        Ayuda
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MobileMenu should be rendered without active link 1`] = `
+<DocumentFragment>
+  <div
+    class="sm:hidden block"
+  >
+    <div
+      class="px-2 pt-2 pb-3 bg-white"
+    >
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/"
+      >
+        Inicio
+      </a>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/groups"
+      >
+        Grupos
+      </a>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/ideas/new"
+      >
+        Añadir idea
+      </a>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/help"
+      >
+        Ayuda
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`MobileMenu should not be rendered when closed 1`] = `
+<DocumentFragment>
+  <div
+    class="sm:hidden hidden"
+  >
+    <div
+      class="px-2 pt-2 pb-3 bg-white"
+    >
+      <span
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+      >
+        Inicio
+      </span>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/groups"
+      >
+        Grupos
+      </a>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/ideas/new"
+      >
+        Añadir idea
+      </a>
+      <a
+        class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+        href="/help"
+      >
+        Ayuda
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

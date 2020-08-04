@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MobileLink should be rendered correctly 1`] = `
+<DocumentFragment>
+  <a
+    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+    href="/no-active"
+  >
+    Profile
+  </a>
+</DocumentFragment>
+`;
+
+exports[`MobileLink should be rendered correctly when current is enabled 1`] = `
+<DocumentFragment>
+  <span
+    class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+  >
+    Profile
+  </span>
+</DocumentFragment>
+`;

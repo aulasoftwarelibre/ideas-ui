@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileMenu should be rendered closed with session 1`] = `
+<DocumentFragment>
+  <div
+    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+  >
+    <div
+      class="relative"
+    >
+      <div>
+        <button
+          aria-haspopup="true"
+          aria-label="User menu"
+          class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
+          id="user-menu"
+        >
+          <img
+            class="h-8 w-8 rounded-full"
+            src="/avatar.svg"
+          />
+        </button>
+      </div>
+      <div
+        class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
+      >
+        <div
+          aria-labelledby="user-menu"
+          aria-orientation="vertical"
+          class="py-1 rounded-md bg-white shadow-xs hidden"
+          role="menu"
+        >
+          <a
+            class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+            href="/user/profile"
+            role="menuitem"
+          >
+            Editar perfil
+          </a>
+          <a
+            class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+            href="/user/ideas"
+            role="menuitem"
+          >
+            Actividades
+          </a>
+          <a
+            class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+            href="/api/auth/signout"
+            role="menuitem"
+          >
+            Salir
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ProfileMenu should be rendered correctly without session 1`] = `<DocumentFragment />`;
+
+exports[`ProfileMenu should be rendered opened with session 1`] = `
+<DocumentFragment>
+  <div
+    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+  >
+    <div
+      class="relative"
+    >
+      <div>
+        <button
+          aria-haspopup="true"
+          aria-label="User menu"
+          class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out"
+          id="user-menu"
+        >
+          <img
+            class="h-8 w-8 rounded-full"
+            src="/avatar.svg"
+          />
+        </button>
+      </div>
+      <div
+        class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
+      >
+        <div
+          aria-labelledby="user-menu"
+          aria-orientation="vertical"
+          class="py-1 rounded-md bg-white shadow-xs"
+          role="menu"
+        >
+          <a
+            class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+            href="/user/profile"
+            role="menuitem"
+          >
+            Editar perfil
+          </a>
+          <a
+            class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+            href="/user/ideas"
+            role="menuitem"
+          >
+            Actividades
+          </a>
+          <a
+            class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out"
+            href="/api/auth/signout"
+            role="menuitem"
+          >
+            Salir
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
