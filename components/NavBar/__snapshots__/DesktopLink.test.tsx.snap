@@ -3,7 +3,7 @@
 exports[`DesktopLink should be rendered correctly 1`] = `
 <DocumentFragment>
   <a
-    class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+    class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
     href="/no-active"
   >
     Profile
@@ -14,7 +14,7 @@ exports[`DesktopLink should be rendered correctly 1`] = `
 exports[`DesktopLink should be rendered correctly when current is enabled 1`] = `
 <DocumentFragment>
   <span
-    class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+    class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary"
   >
     Profile
   </span>

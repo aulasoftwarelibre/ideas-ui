@@ -27,7 +27,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+              className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-white hover:bg-primary focus:outline-none focus:bg-primary focus:text-white transition duration-150 ease-in-out"
               aria-label="Main menu"
               aria-expanded="false"
               onClick={changeMenuVisibility}
