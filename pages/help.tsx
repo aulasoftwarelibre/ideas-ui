@@ -1,30 +1,15 @@
-import Head from "next/head";
-import NavBar from "../components/NavBar/NavBar";
-import { NextPage } from "next";
-import { getSession } from "next-auth/client";
-import { Session } from "../model/user/auth";
+import { NextPage } from 'next';
+import Head from 'next/head';
 
-interface Props {
-  session: Session;
-}
-
-const Help: NextPage<Props> = ({ session }) => {
+const Help: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Help</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Ayuda</title>
       </Head>
-      <NavBar session={session}></NavBar>
-      <main>Help</main>
+      Ayuda
     </div>
   );
-};
-
-Help.getInitialProps = async (context) => {
-  return {
-    session: await getSession(context),
-  };
 };
 
 export default Help;
