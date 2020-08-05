@@ -17,7 +17,7 @@ const DesktopLink: React.FunctionComponent<Props> = ({
 
   if (isActive) {
     return (
-      <span className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange">
+      <span className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary">
         {label}
       </span>
     );
@@ -25,7 +25,7 @@ const DesktopLink: React.FunctionComponent<Props> = ({
 
   return (
     <Link href={path}>
-      <a className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange">
+      <a className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary">
         {label}
       </a>
     </Link>

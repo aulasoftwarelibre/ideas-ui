@@ -17,7 +17,7 @@ exports[`NavBar should render with mobile menu open 1`] = `
           <button
             aria-expanded="false"
             aria-label="Main menu"
-            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+            class="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-white hover:bg-primary focus:outline-none focus:bg-primary focus:text-white transition duration-150 ease-in-out"
           >
             <svg
               class="h-6 w-6 hidden"
@@ -71,18 +71,18 @@ exports[`NavBar should render with mobile menu open 1`] = `
               class="flex"
             >
               <span
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary"
               >
                 Inicio
               </span>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/groups"
               >
                 Grupos
               </a>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/help"
               >
                 Ayuda
@@ -151,7 +151,7 @@ exports[`NavBar should render with mobile menu open 1`] = `
             href="/idea/add"
           >
             <button
-              class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+              class="ml-3  bg-gradient-l-primary-to-light hover:bg-none hover:bg-secondary text-white font-bold py-2 px-6 text-sm rounded-md"
             >
               Añadir idea
             </button>
@@ -166,24 +166,24 @@ exports[`NavBar should render with mobile menu open 1`] = `
         class="px-2 pt-2 pb-3 bg-white"
       >
         <span
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
         >
           Inicio
         </span>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/groups"
         >
           Grupos
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/ideas/new"
         >
           Añadir idea
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/help"
         >
           Ayuda
@@ -211,7 +211,7 @@ exports[`NavBar should render with profile menu open 1`] = `
           <button
             aria-expanded="false"
             aria-label="Main menu"
-            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+            class="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-white hover:bg-primary focus:outline-none focus:bg-primary focus:text-white transition duration-150 ease-in-out"
           >
             <svg
               class="h-6 w-6 block"
@@ -265,18 +265,18 @@ exports[`NavBar should render with profile menu open 1`] = `
               class="flex"
             >
               <span
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary"
               >
                 Inicio
               </span>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/groups"
               >
                 Grupos
               </a>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/help"
               >
                 Ayuda
@@ -345,7 +345,7 @@ exports[`NavBar should render with profile menu open 1`] = `
             href="/idea/add"
           >
             <button
-              class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+              class="ml-3  bg-gradient-l-primary-to-light hover:bg-none hover:bg-secondary text-white font-bold py-2 px-6 text-sm rounded-md"
             >
               Añadir idea
             </button>
@@ -360,24 +360,24 @@ exports[`NavBar should render with profile menu open 1`] = `
         class="px-2 pt-2 pb-3 bg-white"
       >
         <span
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
         >
           Inicio
         </span>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/groups"
         >
           Grupos
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/ideas/new"
         >
           Añadir idea
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/help"
         >
           Ayuda
@@ -405,7 +405,7 @@ exports[`NavBar should render with session 1`] = `
           <button
             aria-expanded="false"
             aria-label="Main menu"
-            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+            class="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-white hover:bg-primary focus:outline-none focus:bg-primary focus:text-white transition duration-150 ease-in-out"
           >
             <svg
               class="h-6 w-6 block"
@@ -459,18 +459,18 @@ exports[`NavBar should render with session 1`] = `
               class="flex"
             >
               <span
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary"
               >
                 Inicio
               </span>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/groups"
               >
                 Grupos
               </a>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/help"
               >
                 Ayuda
@@ -539,7 +539,7 @@ exports[`NavBar should render with session 1`] = `
             href="/idea/add"
           >
             <button
-              class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+              class="ml-3  bg-gradient-l-primary-to-light hover:bg-none hover:bg-secondary text-white font-bold py-2 px-6 text-sm rounded-md"
             >
               Añadir idea
             </button>
@@ -554,24 +554,24 @@ exports[`NavBar should render with session 1`] = `
         class="px-2 pt-2 pb-3 bg-white"
       >
         <span
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
         >
           Inicio
         </span>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/groups"
         >
           Grupos
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/ideas/new"
         >
           Añadir idea
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/help"
         >
           Ayuda
@@ -599,7 +599,7 @@ exports[`NavBar should render without session 1`] = `
           <button
             aria-expanded="false"
             aria-label="Main menu"
-            class="inline-flex items-center justify-center p-2 rounded-md text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:bg-ideaOrange focus:text-white transition duration-150 ease-in-out"
+            class="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-white hover:bg-primary focus:outline-none focus:bg-primary focus:text-white transition duration-150 ease-in-out"
           >
             <svg
               class="h-6 w-6 block"
@@ -653,18 +653,18 @@ exports[`NavBar should render without session 1`] = `
               class="flex"
             >
               <span
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary"
               >
                 Inicio
               </span>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/groups"
               >
                 Grupos
               </a>
               <a
-                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+                class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
                 href="/help"
               >
                 Ayuda
@@ -676,7 +676,7 @@ exports[`NavBar should render without session 1`] = `
           href="/api/auth/signin"
         >
           <button
-            class="ml-3 bg-gradient-l-gorange hover:bg-none hover:bg-gray-700 text-white font-bold py-2 px-6 text-sm rounded-md"
+            class="ml-3  bg-gradient-l-primary-to-light hover:bg-none hover:bg-secondary text-white font-bold py-2 px-6 text-sm rounded-md"
           >
             Iniciar sesión
           </button>
@@ -690,24 +690,24 @@ exports[`NavBar should render without session 1`] = `
         class="px-2 pt-2 pb-3 bg-white"
       >
         <span
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
         >
           Inicio
         </span>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/groups"
         >
           Grupos
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/ideas/new"
         >
           Añadir idea
         </a>
         <a
-          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-ideaOrange hover:text-white hover:bg-ideaOrange focus:outline-none focus:text-white focus:bg-ideaOrange transition duration-150 ease-in-out"
+          class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
           href="/help"
         >
           Ayuda

@@ -9,18 +9,18 @@ exports[`DesktopMenu should be rendered with active link 1`] = `
       class="flex"
     >
       <span
-        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-ideaOrange"
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary"
       >
         Inicio
       </span>
       <a
-        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
         href="/groups"
       >
         Grupos
       </a>
       <a
-        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
         href="/help"
       >
         Ayuda
@@ -39,19 +39,19 @@ exports[`DesktopMenu should be rendered without active link 1`] = `
       class="flex"
     >
       <a
-        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
         href="/"
       >
         Inicio
       </a>
       <a
-        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
         href="/groups"
       >
         Grupos
       </a>
       <a
-        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-ideaOrange border-b-2 border-transparent hover:border-ideaOrange"
+        class="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
         href="/help"
       >
         Ayuda
