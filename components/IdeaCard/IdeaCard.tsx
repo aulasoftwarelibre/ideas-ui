@@ -2,6 +2,7 @@ import React from "react";
 import classnames from "classnames";
 import { Idea } from "../../model/idea/idea";
 import IdeaAvatarList from "./IdeaAvatarList";
+const moment = require("moment");
 
 export interface Props {
   idea: Idea;
@@ -43,8 +44,8 @@ export const IdeaCard: React.FunctionComponent<Props> = ({ idea, onClick }) => {
         </div>
       </div>
       <div className="px-5 py-4 bg-gradient-l-primary-to-light">
-        <div className="font-bold text-white text-xl">
-          {idea.startsAt.toUTCString()}
+        <div className="font-bold text-white text-xl capitalize-date">
+          {moment(idea.startsAt).format("LLLL")}
         </div>
         <div className="font-bold text-white text-sm mb-2">{idea.group}</div>
         <IdeaAvatarList attendess={idea.attendess}></IdeaAvatarList>
