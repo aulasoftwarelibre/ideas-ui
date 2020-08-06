@@ -19,7 +19,7 @@ const options = {
           id: 1,
           name: "J Smith",
           email: "jsmith@example.com",
-          image: "/ideas-isotipo-naranja.svg",
+          image: "/avatar.svg",
         };
 
         if (user) {

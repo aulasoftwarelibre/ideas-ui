@@ -32,7 +32,7 @@ export const Footer: React.FunctionComponent = () => {
                 <div className="flex">
                   <ul className="flex-1">
                     {menuLinks.map((link) => (
-                      <Link href={link.path}>
+                      <Link href={link.path} key={link.path}>
                         <li className="mb-1">
                           <a className="text-teal-100 hover:text-white cursor-pointer">
                             {link.label}

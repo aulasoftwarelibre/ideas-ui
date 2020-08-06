@@ -1,4 +1,4 @@
-import Head from 'next/head';
+import { useSession } from 'next-auth/client';
 import React from 'react';
 
 import { Session } from '../../model/user/auth';
@@ -9,10 +9,9 @@ interface Props {
   session: Session;
 }
 
-export const Layout: React.FunctionComponent<Props> = ({
-  session,
-  children,
-}) => {
+export const Layout: React.FunctionComponent<Props> = ({ children }) => {
+  const [session] = useSession();
+
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar session={session} />
