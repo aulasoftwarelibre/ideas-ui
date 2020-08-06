@@ -1,4 +1,6 @@
-import "../styles/index.css";
-const moment = require("moment");
+import '../styles/index.css';
 
-moment.locale("es");
+import Moment from 'react-moment';
+
+Moment.globalLocale = "es";
+Moment.globalFormat = "LLLL";
