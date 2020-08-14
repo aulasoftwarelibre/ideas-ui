@@ -6,11 +6,11 @@ import IdeaCard from "./IdeaCard";
 
 const todayDate = Date.now();
 
-describe("ActivityCard", () => {
+describe("IdeaCard", () => {
   const onClickMock = jest.fn();
 
   const idea: Idea = {
-    title: "Activity title",
+    title: "Idea title",
     group: "Organization",
     category: "Category",
     startsAt: new Date(todayDate),
@@ -20,7 +20,7 @@ describe("ActivityCard", () => {
   };
   const component = shallow(
     <IdeaCard idea={idea} onClick={onClickMock}>
-      Activity Card
+      Idea Card
     </IdeaCard>
   );
 

@@ -33,13 +33,13 @@ export const IdeaCard: React.FunctionComponent<Props> = ({ idea, onClick }) => {
         <div className="flex-col items-end text-white mb-auto ml-auto">
           <div
             className={classnames(
-              "h-10 px-4 py-1 bg-gradient-l-primary-to-light rounded-tr-large rounded-bl-large",
-              { "w-24": idea.online },
-              { "w-32": !idea.online }
+              "h-8 px-4 py-1 bg-gradient-l-primary-to-light rounded-tr-large rounded-bl-large",
+              { "w-26": idea.online },
+              { "w-30": !idea.online }
             )}
           >
-            <p className="font-bold text-white text-xl">
-              {idea.online ? "Online" : "Presencial"}
+            <p className="font-bold text-white text-l">
+              {idea.online ? "ONLINE" : "PRESENCIAL"}
             </p>
           </div>
         </div>

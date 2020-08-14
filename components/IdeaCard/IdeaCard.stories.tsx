@@ -7,7 +7,7 @@ import IdeaCard from ".";
 import { Idea } from "../../model/idea/idea";
 
 export default {
-  title: "Activity Card",
+  title: "Ideacard/IdeaCard",
   component: IdeaCard,
   decorators: [withKnobs],
 };
@@ -15,7 +15,7 @@ export default {
 const todayDate = Date.now();
 
 const idea: Idea = {
-  title: "Activity title",
+  title: "Idea title",
   group: "Organization",
   category: "Category",
   startsAt: new Date(todayDate),
