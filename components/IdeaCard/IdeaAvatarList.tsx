@@ -2,13 +2,13 @@ import React from "react";
 import { User } from "../../model/user/auth";
 
 export interface Props {
-  attendess: User[];
+  attendees: User[];
 }
 
 export const IdeaAvatarList: React.FunctionComponent<Props> = ({
-  attendess,
+  attendees,
 }) => {
-  const avatars = attendess
+  const avatars = attendees
     .slice(0, 4)
     .map((attendee, index) => (
       <img
@@ -22,7 +22,7 @@ export const IdeaAvatarList: React.FunctionComponent<Props> = ({
     <div className="flex overflow-hidden p-1">
       {avatars}
       <div className="font-bold text-white text-base ml-3 mt-1">
-        {attendess.length}
+        {attendees.length}
       </div>
     </div>
   );

@@ -12,20 +12,20 @@ export default {
   decorators: [withKnobs],
 };
 
-const avatarAttendess: User[] = [
+const avatarAttendees: User[] = [
   { image: faker.image.avatar() },
   { image: faker.image.avatar() },
   { image: faker.image.avatar() },
   { image: faker.image.avatar() },
 ];
-const emptyAvatarAttendess: User[] = [{}, {}, {}, {}];
+const emptyAvatarAttendees: User[] = [{}, {}, {}, {}];
 
-export const AvatarAttendess = () => (
-  <IdeaAvatarList attendess={avatarAttendess}></IdeaAvatarList>
+export const AvatarAttendees = () => (
+  <IdeaAvatarList attendees={avatarAttendees}></IdeaAvatarList>
 );
 
-export const NoAvatarAttendess = () => (
-  <IdeaAvatarList attendess={emptyAvatarAttendess}></IdeaAvatarList>
+export const NoAvatarAttendees = () => (
+  <IdeaAvatarList attendees={emptyAvatarAttendees}></IdeaAvatarList>
 );
 
-export const Empty = () => <IdeaAvatarList attendess={[]}></IdeaAvatarList>;
+export const Empty = () => <IdeaAvatarList attendees={[]}></IdeaAvatarList>;

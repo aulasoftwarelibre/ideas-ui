@@ -7,5 +7,5 @@ export interface Idea {
   image?: string;
   startsAt: Date;
   online: boolean;
-  attendess: User[];
+  attendees: User[];
 }

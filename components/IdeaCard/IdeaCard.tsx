@@ -1,9 +1,9 @@
-import classnames from 'classnames';
-import React from 'react';
-import Moment from 'react-moment';
+import classnames from "classnames";
+import React from "react";
+import Moment from "react-moment";
 
-import { Idea } from '../../model/idea/idea';
-import IdeaAvatarList from './IdeaAvatarList';
+import { Idea } from "../../model/idea/idea";
+import IdeaAvatarList from "./IdeaAvatarList";
 
 export interface Props {
   idea: Idea;
@@ -49,7 +49,7 @@ export const IdeaCard: React.FunctionComponent<Props> = ({ idea, onClick }) => {
           <Moment>{idea.startsAt}</Moment>
         </div>
         <div className="font-bold text-white text-sm mb-2">{idea.group}</div>
-        <IdeaAvatarList attendess={idea.attendess}></IdeaAvatarList>
+        <IdeaAvatarList attendees={idea.attendees}></IdeaAvatarList>
       </div>
     </div>
   );

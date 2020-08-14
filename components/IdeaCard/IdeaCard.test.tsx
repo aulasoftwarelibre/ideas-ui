@@ -15,7 +15,7 @@ describe("IdeaCard", () => {
     category: "Category",
     startsAt: new Date(todayDate),
     online: true,
-    attendess: [],
+    attendees: [],
     image: "https://source.unsplash.com/featured/?tech",
   };
   const component = shallow(

@@ -20,7 +20,7 @@ const idea: Idea = {
   category: "Category",
   startsAt: new Date(todayDate),
   online: true,
-  attendess: [{}, {}, {}, {}, {}],
+  attendees: [{}, {}, {}, {}, {}],
   image:
     "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
 };

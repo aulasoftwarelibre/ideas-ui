@@ -4,11 +4,10 @@ import { User } from "../../model/user/auth";
 import { IdeaAvatarList } from "./IdeaAvatarList";
 
 describe("AvatarList", () => {
-
-  const attendess: User[] = [{}, {}, {}];
+  const attendees: User[] = [{}, {}, {}];
 
   const component = shallow(
-    <IdeaAvatarList attendess={attendess}></IdeaAvatarList>
+    <IdeaAvatarList attendees={attendees}></IdeaAvatarList>
   );
 
   it("should be rendered correctly", () => {
