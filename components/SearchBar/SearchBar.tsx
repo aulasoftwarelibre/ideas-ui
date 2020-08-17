@@ -1,39 +1,42 @@
-import React from "react";
+import React from 'react';
 
 export interface Props {
-  criteria?: string;
-  onClick?: () => void;
+  criteria: string;
+  onChange: (criteria: string) => void;
 }
 
 export const SearchBar: React.FunctionComponent<Props> = ({
   criteria,
-  onClick,
+  onChange,
 }) => {
   return (
-    <div className="flex bg-gradient-l-primary-to-light rounded-lg text-white px-2 py-2 items-center">
-      <button
+    <div
+      className="flex bg-gradient-l-primary-to-light rounded-lg text-white px-2 py-2 items-center"
+      data-testid="searchbar"
+    >
+      <span
         id="search-tool"
-        type="submit"
         className="px-3 py-3 focus:outline-none focus:shadow-outline"
-        onClick={onClick}
       >
         <svg
           fill="none"
           stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           viewBox="0 0 24 24"
           className="w-6 h-6"
         >
           <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg>
-      </button>
+      </span>
       <input
         className="bg-transparent focus:outline-none placeholder- placeholder-white text-xl w-full pl-5"
         type="search"
         name="search"
         placeholder="Buscar eventos i.e web-development"
+        onChange={(e) => onChange(e.target.value)}
+        data-testid="searchbar-input"
       ></input>
     </div>
   );

@@ -1,3 +1,124 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchBar should be rendered correctly 1`] = `ShallowWrapper {}`;
+exports[`SearchBar should be rendered correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="flex bg-gradient-l-primary-to-light rounded-lg text-white px-2 py-2 items-center"
+        data-testid="searchbar"
+      >
+        <span
+          class="px-3 py-3 focus:outline-none focus:shadow-outline"
+          id="search-tool"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            />
+          </svg>
+        </span>
+        <input
+          class="bg-transparent focus:outline-none placeholder- placeholder-white text-xl w-full pl-5"
+          data-testid="searchbar-input"
+          name="search"
+          placeholder="Buscar eventos i.e web-development"
+          type="search"
+        />
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="flex bg-gradient-l-primary-to-light rounded-lg text-white px-2 py-2 items-center"
+      data-testid="searchbar"
+    >
+      <span
+        class="px-3 py-3 focus:outline-none focus:shadow-outline"
+        id="search-tool"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+      </span>
+      <input
+        class="bg-transparent focus:outline-none placeholder- placeholder-white text-xl w-full pl-5"
+        data-testid="searchbar-input"
+        name="search"
+        placeholder="Buscar eventos i.e web-development"
+        type="search"
+      />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
