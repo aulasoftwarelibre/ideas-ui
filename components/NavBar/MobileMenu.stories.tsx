@@ -18,11 +18,9 @@ export const WithoutActiveLink = () => {
   return <MobileMenu hideMenu={false} />;
 };
 
-WithoutActiveLink.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/user/profile",
-    },
+WithoutActiveLink.parameters = {
+  nextRouter: {
+    pathname: "/user/profile",
   },
 };
 

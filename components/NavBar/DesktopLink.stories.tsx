@@ -13,11 +13,9 @@ export const Default = () => {
   return <DesktopLink path="/no-active" label="Groups" />;
 };
 
-Default.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/active",
-    },
+Default.parameters = {
+  nextRouter: {
+    pathname: "/active",
   },
 };
 
@@ -25,10 +23,8 @@ export const Active = () => {
   return <DesktopLink path="/active" label="Groups" />;
 };
 
-Active.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/active",
-    },
+Active.parameters = {
+  nextRouter: {
+    pathname: "/active",
   },
 };

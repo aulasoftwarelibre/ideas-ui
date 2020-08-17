@@ -17,10 +17,8 @@ export const WithoutActiveLink = () => {
   return <DesktopMenu />;
 };
 
-WithoutActiveLink.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/no-active",
-    },
+WithoutActiveLink.parameters = {
+  nextRouter: {
+    pathname: "/no-active",
   },
 };

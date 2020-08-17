@@ -13,11 +13,9 @@ export const Default = () => {
   return <ProfileLink path="/no-active" label="Profile" />;
 };
 
-Default.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/active",
-    },
+Default.parameters = {
+  nextRouter: {
+    pathname: "/active",
   },
 };
 
@@ -25,10 +23,8 @@ export const Active = () => {
   return <ProfileLink path="/active" label="Profile" />;
 };
 
-Active.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/active",
-    },
+Active.parameters = {
+  nextRouter: {
+    pathname: "/active",
   },
 };
