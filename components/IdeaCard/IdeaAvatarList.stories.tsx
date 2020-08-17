@@ -1,15 +1,12 @@
-import React from "react";
+import faker from 'faker';
+import React from 'react';
 
-import { withKnobs, object } from "@storybook/addon-knobs";
-
-import { User } from "../../model/user/auth";
-import IdeaAvatarList from "./IdeaAvatarList";
-import faker from "faker";
+import { User } from '../../model/user/auth';
+import IdeaAvatarList, { Props } from './IdeaAvatarList';
 
 export default {
-  title: "Ideacard/IdeaAvatarList",
+  title: "IdeaCard/IdeaAvatarList",
   component: IdeaAvatarList,
-  decorators: [withKnobs],
 };
 
 const avatarAttendees: User[] = [
@@ -20,12 +17,13 @@ const avatarAttendees: User[] = [
 ];
 const emptyAvatarAttendees: User[] = [{}, {}, {}, {}];
 
-export const AvatarAttendees = () => (
-  <IdeaAvatarList attendees={avatarAttendees}></IdeaAvatarList>
-);
+const Template = (args: Props) => <IdeaAvatarList {...args} />;
 
-export const NoAvatarAttendees = () => (
-  <IdeaAvatarList attendees={emptyAvatarAttendees}></IdeaAvatarList>
-);
+export const AvatarAttendees = Template.bind({});
+AvatarAttendees.args = { attendees: avatarAttendees };
 
-export const Empty = () => <IdeaAvatarList attendees={[]}></IdeaAvatarList>;
+export const NoAvatarAttendees = Template.bind({});
+NoAvatarAttendees.args = { attendees: emptyAvatarAttendees };
+
+export const Empty = Template.bind({});
+Empty.args = { attendees: [] };
