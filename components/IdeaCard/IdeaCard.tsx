@@ -36,7 +36,7 @@ export const IdeaCard: React.FunctionComponent<Props> = ({ idea }) => {
               <div
                 data-testid="idea-type"
                 className={classnames(
-                  "h-8 px-4 py-1 bg-gradient-l-primary-to-light rounded-tr-large rounded-bl-large",
+                  "h-8 px-4 py-1 bg-gradient-to-r from-primary to-primary-light rounded-tr-large rounded-bl-large",
                   { "w-26": idea.online },
                   { "w-30": !idea.online }
                 )}
@@ -47,7 +47,7 @@ export const IdeaCard: React.FunctionComponent<Props> = ({ idea }) => {
               </div>
             </div>
           </div>
-          <div className="px-5 py-4 bg-gradient-l-primary-to-light">
+          <div className="px-5 py-4 bg-gradient-to-r from-primary to-primary-light">
             <div className="font-bold text-white text-xl capitalize-date">
               <Moment>{idea.startsAt}</Moment>
             </div>

@@ -8,14 +8,10 @@ module.exports = {
         primary: "#ff8a00",
         "primary-light": "#ffc000",
         secondary: "#5c5c5c",
-        "primary-to-light": ["#ffc000", "#ff8a00"],
       },
       fontFamily: {
         sans: ["Lato", ...defaultTheme.fontFamily.sans],
       },
-      linearGradientColors: (theme) => theme("colors"),
-      radialGradientColors: (theme) => theme("colors"),
-      conicGradientColors: (theme) => theme("colors"),
     },
     borderRadius: {
       none: "0",
@@ -31,7 +27,7 @@ module.exports = {
   variants: {
     backgroundColor: ["responsive", "hover", "focus"],
     backgroundImage: ["hover", "responsive"],
-    margin: ["responsive", "first"]
+    margin: ["responsive", "first"],
   },
-  plugins: [require("tailwindcss-gradients"), require("@tailwindcss/ui")],
+  plugins: [require("@tailwindcss/ui")],
 };
