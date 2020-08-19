@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { NextRouter, withRouter } from 'next/router';
 import React from 'react';
 
-interface Props {
+export interface Props {
   label: string;
   path: string;
   router: NextRouter;
@@ -17,7 +17,10 @@ const MobileLink: React.FunctionComponent<Props> = ({
 
   if (isActive) {
     return (
-      <span className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out">
+      <span
+        className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-white bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
+        data-testid="active-mobile-link"
+      >
         {label}
       </span>
     );
@@ -25,7 +28,10 @@ const MobileLink: React.FunctionComponent<Props> = ({
 
   return (
     <Link href={path}>
-      <a className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out">
+      <a
+        className="mt-1 block px-3 py-2 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary focus:outline-none focus:text-white focus:bg-primary transition duration-150 ease-in-out"
+        data-testid="mobile-link"
+      >
         {label}
       </a>
     </Link>

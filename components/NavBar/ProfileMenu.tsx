@@ -5,7 +5,7 @@ import { profileLinks } from '../../config/links';
 import { Session } from '../../model/user/auth';
 import ProfileLink from './ProfileLink';
 
-interface Props {
+export interface Props {
   session: Session;
   hideMenu: boolean;
   onClick: () => void;
@@ -19,7 +19,10 @@ export const ProfileMenu: React.FunctionComponent<Props> = ({
   return (
     <>
       {session && (
-        <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <div
+          className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          data-testid="profile-menu"
+        >
           <div className="relative">
             <div>
               <button
@@ -44,6 +47,7 @@ export const ProfileMenu: React.FunctionComponent<Props> = ({
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="user-menu"
+                data-testid="profile-menu-box"
               >
                 {profileLinks.map((link) => (
                   <ProfileLink

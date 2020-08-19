@@ -1,30 +1,36 @@
 import React from 'react';
 
-import { renderMockRouter } from '../../utils/test-utils';
-import MobileMenu from './MobileMenu';
+import { renderMockRouter, screen } from '../../utils/test-utils';
+import {
+  Hidden,
+  WithActiveLink,
+  WithoutActiveLink,
+} from './MobileMenu.stories';
 
 describe("MobileMenu", () => {
   it("should be rendered without active link", () => {
-    const { asFragment } = renderMockRouter(<MobileMenu hideMenu={false} />, {
+    renderMockRouter(<WithoutActiveLink />, {
       router: { pathname: "/no-active" },
     });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("mobile-menu"));
+    expect(screen.queryAllByTestId("active-mobile-link")).toHaveLength(0);
   });
 
   it("should be rendered with active link", () => {
-    const { asFragment } = renderMockRouter(<MobileMenu hideMenu={false} />, {
+    renderMockRouter(<WithActiveLink />, {
       router: { pathname: "/" },
     });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("mobile-menu"));
+    expect(screen.queryAllByTestId("active-mobile-link")).toHaveLength(1);
   });
 
-  it("should not be rendered when closed", () => {
-    const { asFragment } = renderMockRouter(<MobileMenu hideMenu={true} />, {
+  it("should be hidden when menu is closed", () => {
+    renderMockRouter(<Hidden />, {
       router: { pathname: "/" },
     });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("mobile-menu")).toHaveClass("sm:hidden");
   });
 });

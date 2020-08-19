@@ -1,5 +1,4 @@
 import { render as defaultRender, RenderResult } from '@testing-library/react';
-import { mount, MountRendererProps, ReactWrapper } from 'enzyme';
 import { RouterContext } from 'next/dist/next-server/lib/router-context';
 import { NextRouter } from 'next/router';
 import React from 'react';
@@ -52,17 +51,4 @@ export function renderMockRouter(
   }
 
   return defaultRender(ui, { wrapper, ...options });
-}
-
-export function mountMockRouter(
-  ui: RenderUI,
-  { wrapper, router, ...options }: RenderOptions = {}
-): ReactWrapper {
-  return mount(ui, {
-    wrappingComponent: (props) => (
-      <RouterContext.Provider value={{ ...mockRouter, ...router }}>
-        {props.children}
-      </RouterContext.Provider>
-    ),
-  });
 }

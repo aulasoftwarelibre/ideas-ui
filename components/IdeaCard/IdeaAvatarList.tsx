@@ -1,5 +1,6 @@
-import React from "react";
-import { User } from "../../model/user/auth";
+import React from 'react';
+
+import { User } from '../../model/user/auth';
 
 export interface Props {
   attendees: User[];
@@ -18,6 +19,7 @@ export const IdeaAvatarList: React.FunctionComponent<Props> = ({
         key={index}
       />
     ));
+
   return (
     <div className="flex overflow-hidden p-1">
       {avatars}

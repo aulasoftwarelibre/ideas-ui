@@ -1,13 +1,14 @@
 import { action } from '@storybook/addon-actions';
 import React from 'react';
 
-import { SearchBar } from './SearchBar';
+import { Props, SearchBar } from './SearchBar';
 
 export default {
-  title: "Search Bar",
+  title: "SearchBar/SearchBar",
   component: SearchBar,
 };
 
-export const Default = () => (
-  <SearchBar criteria="" onChange={action("clicked")}></SearchBar>
-);
+const Template = (args: Props) => <SearchBar {...args} />;
+
+export const Default = Template.bind({});
+Default.args = { criteria: "" };

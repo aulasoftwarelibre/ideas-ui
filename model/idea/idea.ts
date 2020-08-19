@@ -1,6 +1,8 @@
-import { User } from "../user/auth";
+import { User } from '../user/auth';
 
 export interface Idea {
+  id: string;
+  slug: string;
   title: string;
   group: string;
   category: string;

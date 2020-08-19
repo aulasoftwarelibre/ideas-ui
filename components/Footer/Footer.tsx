@@ -6,7 +6,7 @@ import { menuLinks } from '../../config/links';
 
 export const Footer: React.FunctionComponent = () => {
   return (
-    <footer className="footer relative">
+    <footer className="footer relative" data-testid="footer">
       <div className="bg-gray-900 text-sm">
         <div className="container mx-auto px-6">
           <div className="sm:flex py-6">

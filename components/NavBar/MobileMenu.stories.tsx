@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
-import MobileMenu from './MobileMenu';
+import MobileMenu, { Props } from './MobileMenu';
 
 export default {
   component: MobileMenu,
@@ -14,18 +14,24 @@ export default {
   },
 };
 
-export const WithoutActiveLink = () => {
-  return <MobileMenu hideMenu={false} />;
-};
+const Template = (args: Props) => <MobileMenu {...args} />;
 
-WithoutActiveLink.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/user/profile",
-    },
+export const WithoutActiveLink = Template.bind({});
+WithoutActiveLink.args = {
+  hideMenu: false,
+};
+WithoutActiveLink.parameters = {
+  nextRouter: {
+    pathname: "/user/profile",
   },
 };
 
-export const WithActiveLink = () => {
-  return <MobileMenu hideMenu={false} />;
+export const WithActiveLink = Template.bind({});
+WithActiveLink.args = {
+  hideMenu: false,
+};
+
+export const Hidden = Template.bind({});
+Hidden.args = {
+  hideMenu: true,
 };

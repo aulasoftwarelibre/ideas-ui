@@ -2,15 +2,17 @@ import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 import React from 'react';
 
-import GradientButton from '.';
+import GradientButton, { Props } from './GradientButton';
 
 export default {
   title: "Gradient Button",
   component: GradientButton,
+  argTypes: {
+    children: { control: "text" },
+  },
 };
 
-export const Default = () => (
-  <GradientButton onClick={action("clicked")}>
-    {text("Text", "Gradient Button")}
-  </GradientButton>
-);
+const Template = (args: Props) => <GradientButton {...args} />;
+
+export const Default = Template.bind({});
+Default.args = { children: "Grandient Button" };

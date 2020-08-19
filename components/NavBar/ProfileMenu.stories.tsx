@@ -1,9 +1,8 @@
-import { action } from '@storybook/addon-actions';
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
 import { Session } from '../../model/user/auth';
-import ProfileMenu from './ProfileMenu';
+import ProfileMenu, { Props } from './ProfileMenu';
 
 export default {
   component: ProfileMenu,
@@ -19,66 +18,41 @@ const session: Session = {
   },
 };
 
-export const ClosedWithUserAvatar = () => {
-  return (
-    <div className="mx-auto flex float-right">
-      <ProfileMenu
-        session={session}
-        hideMenu={true}
-        onClick={action("clicked")}
-      />
-    </div>
-  );
+const Template = (args: Props) => (
+  <div className="mx-auto flex float-right">
+    <ProfileMenu {...args} />
+  </div>
+);
+
+export const ClosedWithUserAvatar = Template.bind({});
+ClosedWithUserAvatar.args = {
+  session,
+  hideMenu: true,
 };
 
-export const ClosedWithDefaultAvatar = () => {
-  return (
-    <div className="mx-auto flex float-right">
-      <ProfileMenu
-        session={{ user: {} }}
-        hideMenu={true}
-        onClick={action("clicked")}
-      />
-    </div>
-  );
+export const ClosedWithDefaultAvatar = Template.bind({});
+ClosedWithDefaultAvatar.args = {
+  session: { user: {} },
+  hideMenu: true,
 };
 
-export const OpenWithUserAvatar = () => {
-  return (
-    <div className="mx-auto flex float-right">
-      <ProfileMenu
-        session={session}
-        hideMenu={false}
-        onClick={action("clicked")}
-      />
-    </div>
-  );
+export const OpenWithUserAvatar = Template.bind({});
+OpenWithUserAvatar.args = {
+  session,
+  hideMenu: false,
 };
 
-export const OpenWithDefaultAvatar = () => {
-  return (
-    <div className="mx-auto flex float-right">
-      <ProfileMenu
-        session={{ user: {} }}
-        hideMenu={false}
-        onClick={action("clicked")}
-      />
-    </div>
-  );
+export const OpenWithDefaultAvatar = Template.bind({});
+OpenWithDefaultAvatar.args = {
+  session: { user: {} },
+  hideMenu: false,
 };
 
-export const OpenWithActiveLink = () => {
-  return (
-    <div className="mx-auto flex float-right">
-      <ProfileMenu
-        session={session}
-        hideMenu={false}
-        onClick={action("clicked")}
-      />
-    </div>
-  );
+export const OpenWithActiveLink = Template.bind({});
+OpenWithActiveLink.args = {
+  session,
+  hideMenu: false,
 };
-
 OpenWithActiveLink.story = {
   parameters: {
     nextRouter: {

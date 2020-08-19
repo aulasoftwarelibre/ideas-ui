@@ -9,18 +9,13 @@ export default {
   decorators: [withNextRouter],
 };
 
-export const WithActiveLink = () => {
-  return <DesktopMenu />;
-};
+const Template = () => <DesktopMenu />;
 
-export const WithoutActiveLink = () => {
-  return <DesktopMenu />;
-};
+export const WithActiveLink = Template.bind({});
 
-WithoutActiveLink.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/no-active",
-    },
+export const WithoutActiveLink = Template.bind({});
+WithoutActiveLink.parameters = {
+  nextRouter: {
+    pathname: "/no-active",
   },
 };

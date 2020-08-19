@@ -1,50 +1,23 @@
+import { screen } from '@testing-library/react';
 import React from 'react';
 
-import { mountMockRouter, renderMockRouter } from '../../utils/test-utils';
-import ProfileLink from './ProfileLink';
+import { renderMockRouter } from '../../utils/test-utils';
+import { Active, Default } from './ProfileLink.stories';
 
 describe("ProfileLink", () => {
   it("should be rendered correctly", () => {
-    const { asFragment } = renderMockRouter(
-      <ProfileLink path="/no-active" label="Profile" />,
-      {
-        router: { pathname: "/active" },
-      }
-    );
+    renderMockRouter(<Default {...Default.args} />, {
+      router: { pathname: "/active" },
+    });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("profile-link"));
   });
 
   it("should be rendered correctly when current is enabled", () => {
-    const { asFragment } = renderMockRouter(
-      <ProfileLink path="/active" label="Profile" />,
-      {
-        router: { pathname: "/active" },
-      }
-    );
+    renderMockRouter(<Active {...Active.args} />, {
+      router: { pathname: "/active" },
+    });
 
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it("should be a link", () => {
-    const wrapper = mountMockRouter(
-      <ProfileLink path="/active" label="Profile" />,
-      {
-        router: { pathname: "/" },
-      }
-    );
-
-    expect(wrapper.find("a")).toHaveLength(1);
-  });
-
-  it("should be a span when active", () => {
-    const wrapper = mountMockRouter(
-      <ProfileLink path="/active" label="Profile" />,
-      {
-        router: { pathname: "/active" },
-      }
-    );
-
-    expect(wrapper.find("span")).toHaveLength(1);
+    expect(screen.getByTestId("active-profile-link"));
   });
 });

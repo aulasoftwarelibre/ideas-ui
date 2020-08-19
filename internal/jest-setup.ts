@@ -1,13 +1,2 @@
-import 'jsdom-global/register';
+import '@testing-library/jest-dom/extend-expect';
 
-import * as Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import { JSDOM } from 'jsdom';
-
-Enzyme.configure({ adapter: new Adapter() });
-
-const global: any = {};
-
-const doc = new JSDOM("<!doctype html><html><body></body></html>");
-global.document = doc;
-global.window = global.document.defaultView;

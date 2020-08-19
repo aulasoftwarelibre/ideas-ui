@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
-import DesktopLink from './DesktopLink';
+import DesktopLink, { Props } from './DesktopLink';
 
 export default {
   component: DesktopLink,
@@ -9,26 +9,28 @@ export default {
   decorators: [withNextRouter],
 };
 
-export const Default = () => {
-  return <DesktopLink path="/no-active" label="Groups" />;
+const Template = (args: Props) => <DesktopLink {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  label: "Groups",
+  path: "/no-active",
 };
 
-Default.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/active",
-    },
+Default.parameters = {
+  nextRouter: {
+    pathname: "/active",
   },
 };
 
-export const Active = () => {
-  return <DesktopLink path="/active" label="Groups" />;
+export const Active = Template.bind({});
+Active.args = {
+  label: "Groups",
+  path: "/active",
 };
 
-Active.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/active",
-    },
+Active.parameters = {
+  nextRouter: {
+    pathname: "/active",
   },
 };

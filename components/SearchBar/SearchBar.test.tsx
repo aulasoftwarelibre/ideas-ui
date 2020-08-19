@@ -1,30 +1,23 @@
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import React from 'react';
 
-import SearchBar from './SearchBar';
+import { Default } from './SearchBar.stories';
 
 describe("SearchBar", () => {
   const onClickMock = jest.fn();
-  const component = render(
-    <SearchBar criteria="" onChange={onClickMock}></SearchBar>
-  );
 
   it("should be rendered correctly", () => {
-    expect(component).toMatchSnapshot();
+    render(<Default {...Default.args} />);
+    expect(screen.getByTestId("searchbar"));
   });
 
   it("should return changed criteria", () => {
-    const { getByTestId } = render(
-      <SearchBar criteria="" onChange={onClickMock}></SearchBar>
-    );
+    render(<Default {...Default.args} onChange={onClickMock} />);
 
-    getByTestId("searchbar");
-
-    fireEvent.change(getByTestId("searchbar-input"), {
+    fireEvent.change(screen.getByTestId("searchbar-input"), {
       target: { value: "a" },
     });
 
-    expect(onClickMock).toHaveBeenCalledTimes(1);
     expect(onClickMock).toHaveBeenCalledWith("a");
   });
 });

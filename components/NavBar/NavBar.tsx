@@ -9,7 +9,7 @@ import DesktopMenu from './DesktopMenu';
 import { MobileMenu } from './MobileMenu';
 import ProfileMenu from './ProfileMenu';
 
-interface Props {
+export interface Props {
   session: Session;
 }
 
@@ -22,7 +22,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
   } = useNavBar();
 
   return (
-    <nav className="bg-white">
+    <nav className="bg-white" data-testid="navbar">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -33,6 +33,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
               onClick={changeMenuVisibility}
             >
               <svg
+                data-testid="close-menu"
                 className={classnames(
                   "h-6 w-6",
                   { block: hideMenu },
@@ -50,6 +51,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
                 />
               </svg>
               <svg
+                data-testid="open-menu"
                 className={classnames(
                   "h-6 w-6",
                   { hidden: hideMenu },

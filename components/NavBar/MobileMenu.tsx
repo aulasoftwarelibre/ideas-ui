@@ -4,7 +4,7 @@ import React from 'react';
 import { mobileLinks } from '../../config/links';
 import MobileLink from './MobileLink';
 
-interface Props {
+export interface Props {
   hideMenu: boolean;
 }
 
@@ -16,7 +16,7 @@ export const MobileMenu: React.FunctionComponent<Props> = ({ hideMenu }) => {
   );
 
   return (
-    <div className={state}>
+    <div className={state} data-testid="mobile-menu">
       <div className="px-2 pt-2 pb-3 bg-white">
         {mobileLinks.map((link) => (
           <MobileLink

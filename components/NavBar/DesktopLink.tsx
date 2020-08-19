@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { NextRouter, withRouter } from 'next/router';
 import React from 'react';
 
-interface Props {
+export interface Props {
   label: string;
   path: string;
   router: NextRouter;
@@ -17,7 +17,10 @@ const DesktopLink: React.FunctionComponent<Props> = ({
 
   if (isActive) {
     return (
-      <span className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary">
+      <span
+        className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-primary"
+        data-testid="active-desktop-link"
+      >
         {label}
       </span>
     );
@@ -25,7 +28,10 @@ const DesktopLink: React.FunctionComponent<Props> = ({
 
   return (
     <Link href={path}>
-      <a className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary">
+      <a
+        className="ml-4 px-3 py-2 text-sm font-medium leading-5 text-primary border-b-2 border-transparent hover:border-primary"
+        data-testid="desktop-link"
+      >
         {label}
       </a>
     </Link>

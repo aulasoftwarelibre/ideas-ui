@@ -1,9 +1,12 @@
 import React from 'react';
 
 import { Session } from '../../model/user/auth';
-import NavBarContext from '../../state/navbar/NavBarContext';
-import { mountMockRouter, renderMockRouter } from '../../utils/test-utils';
-import NavBar from './NavBar';
+import { renderMockRouter, screen } from '../../utils/test-utils';
+import {
+  DesktopWithoutSession,
+  DesktopWithProfile,
+  DesktopWithSession,
+} from './NavBar.stories';
 
 const session: Session = {
   user: {
@@ -14,75 +17,21 @@ const session: Session = {
 };
 
 describe("NavBar", () => {
-  it("should render without session", () => {
-    const { asFragment } = renderMockRouter(
-      <NavBarContext.Provider
-        value={{
-          state: { hideMenu: true, hideProfile: true },
-          dispatch: () => {},
-        }}
-      >
-        <NavBar session={null} />
-      </NavBarContext.Provider>,
-      {
-        router: { pathname: "/" },
-      }
-    );
+  it("should render desktop menu without session", () => {
+    renderMockRouter(<DesktopWithoutSession {...DesktopWithoutSession.args} />);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getAllByText("Iniciar sesión"));
   });
 
-  it("should render with session", () => {
-    const { asFragment } = renderMockRouter(
-      <NavBarContext.Provider
-        value={{
-          state: { hideMenu: true, hideProfile: true },
-          dispatch: () => {},
-        }}
-      >
-        <NavBar session={session} />
-      </NavBarContext.Provider>,
-      {
-        router: { pathname: "/" },
-      }
-    );
+  it("should render desktop menu with session", () => {
+    renderMockRouter(<DesktopWithSession {...DesktopWithSession.args} />);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getAllByText("Añadir idea"));
   });
 
-  it("should render with mobile menu open", () => {
-    const { asFragment } = renderMockRouter(
-      <NavBarContext.Provider
-        value={{
-          state: { hideMenu: false, hideProfile: true },
-          dispatch: () => {},
-        }}
-      >
-        <NavBar session={session} />
-      </NavBarContext.Provider>,
-      {
-        router: { pathname: "/" },
-      }
-    );
+  it("should render desktop menu with profile menu open", () => {
+    renderMockRouter(<DesktopWithProfile />);
 
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it("should render with profile menu open", () => {
-    const { asFragment } = renderMockRouter(
-      <NavBarContext.Provider
-        value={{
-          state: { hideMenu: true, hideProfile: false },
-          dispatch: () => {},
-        }}
-      >
-        <NavBar session={session} />
-      </NavBarContext.Provider>,
-      {
-        router: { pathname: "/" },
-      }
-    );
-
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("profile-menu"));
   });
 });
