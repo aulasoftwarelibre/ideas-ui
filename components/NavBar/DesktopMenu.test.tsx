@@ -1,22 +1,24 @@
 import React from 'react';
 
-import { renderMockRouter } from '../../utils/test-utils';
-import DesktopMenu from './DesktopMenu';
+import { renderMockRouter, screen } from '../../utils/test-utils';
+import { WithActiveLink, WithoutActiveLink } from './DesktopMenu.stories';
 
 describe("DesktopMenu", () => {
   it("should be rendered without active link", () => {
-    const { asFragment } = renderMockRouter(<DesktopMenu />, {
+    renderMockRouter(<WithoutActiveLink />, {
       router: { pathname: "/no-active" },
     });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("desktop-menu"));
+    expect(screen.queryAllByTestId("active-desktop-link")).toHaveLength(0);
   });
 
   it("should be rendered with active link", () => {
-    const { asFragment } = renderMockRouter(<DesktopMenu />, {
+    renderMockRouter(<WithActiveLink />, {
       router: { pathname: "/" },
     });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("desktop-menu"));
+    expect(screen.queryAllByTestId("active-desktop-link")).toHaveLength(1);
   });
 });

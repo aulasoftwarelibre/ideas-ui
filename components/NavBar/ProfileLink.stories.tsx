@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
-import ProfileLink from './ProfileLink';
+import ProfileLink, { Props } from './ProfileLink';
 
 export default {
   component: ProfileLink,
@@ -9,8 +9,12 @@ export default {
   decorators: [withNextRouter],
 };
 
-export const Default = () => {
-  return <ProfileLink path="/no-active" label="Profile" />;
+const Template = (args: Props) => <ProfileLink {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  label: "Groups",
+  path: "/no-active",
 };
 
 Default.parameters = {
@@ -19,8 +23,10 @@ Default.parameters = {
   },
 };
 
-export const Active = () => {
-  return <ProfileLink path="/active" label="Profile" />;
+export const Active = Template.bind({});
+Active.args = {
+  label: "Groups",
+  path: "/active",
 };
 
 Active.parameters = {

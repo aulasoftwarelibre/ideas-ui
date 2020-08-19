@@ -1,7 +1,7 @@
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
-import MobileLink from './MobileLink';
+import MobileLink, { Props } from './MobileLink';
 
 export default {
   component: MobileLink,
@@ -9,20 +9,24 @@ export default {
   decorators: [withNextRouter],
 };
 
-export const Default = () => {
-  return <MobileLink path="/no-active" label="Groups" />;
-};
+const Template = (args: Props) => <MobileLink {...args} />;
 
+export const Default = Template.bind({});
+Default.args = {
+  path: "/no-active",
+  label: "Groups",
+};
 Default.parameters = {
   nextRouter: {
     pathname: "/active",
   },
 };
 
-export const Active = () => {
-  return <MobileLink path="/active" label="Profile" />;
+export const Active = Template.bind({});
+Active.args = {
+  path: "/active",
+  label: "Groups",
 };
-
 Active.parameters = {
   nextRouter: {
     pathname: "/active",

@@ -1,61 +1,38 @@
 import React from 'react';
 
-import { mountMockRouter, renderMockRouter } from '../../utils/test-utils';
-import ProfileMenu from './ProfileMenu';
+import { renderMockRouter, screen } from '../../utils/test-utils';
+import {
+  ClosedWithUserAvatar,
+  OpenWithActiveLink,
+  OpenWithUserAvatar,
+} from './ProfileMenu.stories';
 
 describe("ProfileMenu", () => {
-  it("should be rendered opened with session", () => {
-    const { asFragment } = renderMockRouter(
-      <ProfileMenu
-        session={{ user: {} }}
-        hideMenu={false}
-        onClick={() => {}}
-      />,
-      {
-        router: { pathname: "/" },
-      }
-    );
-
-    expect(asFragment()).toMatchSnapshot();
-  });
   it("should be rendered closed with session", () => {
-    const { asFragment } = renderMockRouter(
-      <ProfileMenu session={{ user: {} }} hideMenu={true} onClick={() => {}} />,
-      {
-        router: { pathname: "/" },
-      }
-    );
+    renderMockRouter(<ClosedWithUserAvatar {...ClosedWithUserAvatar.args} />, {
+      router: { pathname: "/" },
+    });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("profile-menu"));
+    expect(screen.getByTestId("profile-menu-box")).toHaveClass("hidden");
   });
 
-  it("should be rendered correctly without session", () => {
-    const { asFragment } = renderMockRouter(
-      <ProfileMenu session={null} hideMenu={false} onClick={() => {}} />,
-      {
-        router: { pathname: "/" },
-      }
-    );
+  it("should be rendered opened with session", () => {
+    renderMockRouter(<OpenWithUserAvatar {...OpenWithUserAvatar.args} />, {
+      router: { pathname: "/" },
+    });
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByTestId("profile-menu"));
+    expect(screen.getByTestId("profile-menu-box")).not.toHaveClass("hidden");
   });
 
-  it("should open profile menu when click", () => {
-    const mockOnClick = jest.fn();
+  it("should be render active link", () => {
+    renderMockRouter(<OpenWithActiveLink {...OpenWithActiveLink.args} />, {
+      router: { pathname: "/user/profile" },
+    });
 
-    const wrapper = mountMockRouter(
-      <ProfileMenu
-        session={{ user: {} }}
-        hideMenu={false}
-        onClick={mockOnClick}
-      />,
-      {
-        router: { pathname: "/" },
-      }
-    );
-
-    wrapper.find("#user-menu").first().simulate("click");
-
-    expect(mockOnClick).toBeCalledTimes(1);
+    expect(screen.getByTestId("profile-menu"));
+    expect(screen.getByTestId("profile-menu-box")).not.toHaveClass("hidden");
+    expect(screen.queryAllByTestId("active-profile-link")).toHaveLength(1);
   });
 });

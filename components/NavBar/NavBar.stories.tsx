@@ -3,7 +3,7 @@ import { withNextRouter } from 'storybook-addon-next-router';
 
 import { Session } from '../../model/user/auth';
 import NavBarContext from '../../state/navbar/NavBarContext';
-import NavBar from './NavBar';
+import NavBar, { Props } from './NavBar';
 
 export default {
   component: NavBar,
@@ -19,19 +19,23 @@ const session: Session = {
   },
 };
 
-export const DesktopWithoutSession = () => {
-  return <NavBar session={null} />;
+const Template = (args: Props) => <NavBar {...args} />;
+
+export const DesktopWithoutSession = Template.bind({});
+DesktopWithoutSession.args = {
+  session: null,
 };
 
-export const DesktopWithSession = () => {
-  return <NavBar session={session} />;
+export const DesktopWithSession = Template.bind({});
+DesktopWithSession.args = {
+  session,
 };
 
 export const DesktopWithProfile = () => {
   return (
     <NavBarContext.Provider
       value={{
-        state: { hideMenu: true, hideProfile: true },
+        state: { hideMenu: true, hideProfile: false },
         dispatch: () => {},
       }}
     >
@@ -40,10 +44,10 @@ export const DesktopWithProfile = () => {
   );
 };
 
-export const MobileWithoutSession = () => {
-  return <NavBar session={null} />;
+export const MobileWithoutSession = Template.bind({});
+MobileWithoutSession.args = {
+  session: null,
 };
-
 MobileWithoutSession.story = {
   parameters: {
     viewport: {
@@ -52,10 +56,10 @@ MobileWithoutSession.story = {
   },
 };
 
-export const MobileWithSession = () => {
-  return <NavBar session={session} />;
+export const MobileWithSession = Template.bind({});
+MobileWithSession.args = {
+  session,
 };
-
 MobileWithSession.story = {
   parameters: {
     viewport: {
