@@ -1,21 +1,19 @@
-import { text } from "@storybook/addon-knobs";
-import { shallow } from "enzyme";
-import React from "react";
-import GradientButton from "./GradientButton";
+import { fireEvent, render, screen } from '@testing-library/react';
+import React from 'react';
+
+import { Default } from './GradientButton.stories';
 
 describe("GradientButton", () => {
   const onClickMock = jest.fn();
-  const component = shallow(
-    <GradientButton onClick={onClickMock}>Gradient Button</GradientButton>
-  );
 
   it("should be rendered correctly", () => {
-    expect(component).toMatchSnapshot();
+    render(<Default {...Default.args} />);
+    expect(screen.getByTestId("gradient-button"));
   });
 
   it("should be clickable", () => {
-    component.simulate("click");
-
-    expect(onClickMock).toHaveBeenCalled();
+    render(<Default {...Default.args} onClick={onClickMock} />);
+    fireEvent.click(screen.getByTestId("gradient-button"));
+    expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 });
