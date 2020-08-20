@@ -15,7 +15,7 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
       <NavBar session={session} />
-      <main className="pt-16 flex flex-col flex-grow overflow-hidden">
+      <main className="flex flex-col flex-grow overflow-hidden">
         {children}
       </main>
       <Footer />
