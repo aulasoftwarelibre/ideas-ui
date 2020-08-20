@@ -6,7 +6,7 @@ export const Hero: React.FunctionComponent = () => (
     data-testid="hero"
   >
     <div className="lg:bg-hero bg-right-top bg-no-repeat max-h-full overflow-hidden">
-      <div className=" my-10 mx-auto max-w-screen-xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28">
+      <div className="my-10 mx-auto max-w-screen-xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28">
         <div className="sm:text-center lg:text-left">
           <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
             Descubre nuevos eventos <br />y grupos{" "}
