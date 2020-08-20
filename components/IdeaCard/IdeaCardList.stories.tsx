@@ -19,7 +19,7 @@ export default {
   },
 };
 
-const ideas: Idea[] = [...Array(8)].map(() => {
+export const ideas: Idea[] = [...Array(8)].map(() => {
   const title = faker.lorem.sentence();
   return {
     id: faker.random.uuid(),
