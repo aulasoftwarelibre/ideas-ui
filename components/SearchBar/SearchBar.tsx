@@ -11,7 +11,7 @@ export const SearchBar: React.FunctionComponent<Props> = ({
 }) => {
   return (
     <div
-      className="flex bg-gradient-l-primary-to-light rounded-lg text-white px-2 py-2 items-center"
+      className="flex bg-gradient-to-r from-primary to-primary-light rounded-lg text-white px-2 py-2 items-center"
       data-testid="searchbar"
     >
       <span
