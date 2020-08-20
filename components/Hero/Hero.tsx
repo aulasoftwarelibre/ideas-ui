@@ -9,10 +9,9 @@ export const Hero: React.FunctionComponent = () => (
       <div className="my-10 mx-auto max-w-screen-xl px-4 sm:my-12 sm:px-6 md:my-16 lg:my-20 lg:px-8 xl:my-28">
         <div className="sm:text-center lg:text-left">
           <h2 className="text-4xl tracking-tight leading-10 font-extrabold text-white sm:text-5xl sm:leading-none md:text-6xl">
-            Descubre nuevos eventos <br />y grupos{" "}
-            <span className="text-indigo-600">cerca de ti</span>
+            Descubre nuevos eventos <br />y grupos cerca de ti
           </h2>
-          <p className="mt-3 text-base text-white sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+          <p className="mt-3 text-base text-white text-opacity-75 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
             Únete a eventos, organiza actividades y conoce a nuevas personas.
           </p>
         </div>
