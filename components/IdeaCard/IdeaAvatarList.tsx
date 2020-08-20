@@ -23,9 +23,11 @@ export const IdeaAvatarList: React.FunctionComponent<Props> = ({
   return (
     <div className="flex overflow-hidden p-1">
       {avatars}
-      <div className="font-bold text-white text-base ml-3 mt-1">
-        {attendees.length}
-      </div>
+      {attendees.length !== 0 && (
+        <div className="font-bold text-white text-base ml-3 mt-1">
+          {attendees.length}
+        </div>
+      )}
     </div>
   );
 };
