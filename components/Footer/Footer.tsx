@@ -50,6 +50,11 @@ export const Footer: React.FunctionComponent = () => {
                 <div className="flex">
                   <ul className="flex-1">
                     <li className="mb-1">
+                      <span className="text-teal-100">
+                        Aula de Software Libre
+                      </span>
+                    </li>
+                    <li className="mb-1">
                       <span className="text-teal-100">Aulario Averroes</span>
                     </li>
                     <li className="mb-1">
