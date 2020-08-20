@@ -1,26 +1,27 @@
 import React from "react";
-import { action } from "@storybook/addon-actions";
-import Category from "../../model/category/category";
-import CategoryFilter from "./CategoryFilter";
+import CategoryFilter, { Props } from "./CategoryFilter";
+import faker from "faker";
+import { Category } from "../../model/category/category";
+
+export const categories: Category[] = [
+  { label: "Todos", id: faker.random.uuid() },
+  { label: "Diseño", id: faker.random.uuid() },
+  { label: "Desarrollo Web", id: faker.random.uuid() },
+  { label: "Digital", id: faker.random.uuid() },
+  { label: "Hardware", id: faker.random.uuid() },
+  { label: "Machine Learning", id: faker.random.uuid() },
+  { label: "Kata", id: faker.random.uuid() },
+];
 
 export default {
   title: "CategoryFilter/CategoryFilter",
   component: CategoryFilter,
+  includeStories: ["Default"],
 };
 
-export const categories: Category[] = [
-  { label: "Todos" },
-  { label: "Diseño" },
-  { label: "Desarrollo Web" },
-  { label: "Digital" },
-  { label: "Hardware" },
-  { label: "Machine Learning" },
-  { label: "Kata" },
-];
+const Template = (args: Props) => <CategoryFilter {...args} />;
 
-export const Default = () => (
-  <CategoryFilter
-    categories={categories}
-    onChangeHandler={() => categories[0]}
-  ></CategoryFilter>
-);
+export const Default = Template.bind({});
+Default.args = {
+  categories: categories,
+};

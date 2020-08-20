@@ -4,7 +4,7 @@ import CategoryLink from "./CategoryLink";
 
 export interface Props {
   categories: Category[];
-  onChangeHandler: (Category) => Category;
+  onChangeHandler: (category: Category) => Category;
 }
 
 export const CategoryFilter: React.FunctionComponent<Props> = ({
@@ -24,6 +24,7 @@ export const CategoryFilter: React.FunctionComponent<Props> = ({
       <div className="-mb-px flex justify-center" data-testid="category-filter">
         {categories.map((category) => (
           <CategoryLink
+            key={category.id}
             label={category.label}
             isSelected={category === selected ? true : false}
             onClick={onClickHandler(category)}
