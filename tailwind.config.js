@@ -4,6 +4,9 @@ module.exports = {
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        hero: "url('/assets/hero.svg')",
+      }),
       colors: {
         primary: "#ff8a00",
         "primary-light": "#ffc000",

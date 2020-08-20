@@ -4,7 +4,7 @@ import React from 'react';
 import { Props, SearchBar } from './SearchBar';
 
 export default {
-  title: "SearchBar/SearchBar",
+  title: "MainPage/SearchBar",
   component: SearchBar,
 };
 
