@@ -9,7 +9,7 @@ describe("IdeaCard", () => {
   it("should render idea card", () => {
     render(<Presencial {...Presencial.args} />);
     expect(screen.getByTestId("idea-card"));
-    expect(screen.getByTestId("idea-type")).toHaveTextContent("PRESENCIAL");
+    expect(screen.getByTestId("idea-type")).not.toHaveTextContent("ONLINE");
   });
 
   it("should render online idea", () => {
