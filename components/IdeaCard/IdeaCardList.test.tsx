@@ -1,23 +1,16 @@
-import faker from 'faker';
+import { render, screen } from '@testing-library/react';
 import React from 'react';
 
-import { Idea } from '../../model/idea/idea';
+import { Default, Empty } from './IdeaCardList.stories';
 
-export const ideas: Idea[] = [...Array(8)].map(() => {
-  const title = faker.lorem.sentence();
-  return {
-    id: faker.random.uuid(),
-    slug: faker.helpers.slugify(title),
-    title: title,
-    group: faker.random.arrayElement(["Group A", "Group B", "Group C"]),
-    category: faker.random.arrayElement([
-      "Category A",
-      "Category B",
-      "Category C",
-    ]),
-    image: faker.image.technics(),
-    startsAt: faker.date.future(),
-    online: faker.random.boolean(),
-    attendees: [],
-  };
+describe("IdeCardList", () => {
+  it("should show a warning when list is empty", () => {
+    render(<Empty {...Empty.args} />);
+    expect(screen.getByTestId("not-found"));
+  });
+
+  it("should show all ideas", () => {
+    render(<Default {...Default.args} />);
+    expect(screen.getAllByTestId("idea-card")).toHaveLength(8);
+  });
 });

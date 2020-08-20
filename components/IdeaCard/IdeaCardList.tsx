@@ -8,7 +8,7 @@ export interface Props {
 }
 
 const NotFound: React.FunctionComponent = () => (
-  <div className="flex flex-col w-1/2 mx-auto">
+  <div className="flex flex-col w-1/2 mx-auto" data-testid="not-found">
     <div className="mx-auto">
       <svg
         className="h-24 w-24"
@@ -42,8 +42,8 @@ export const IdeaCardList: React.FunctionComponent<Props> = ({ ideas }) => {
   return (
     <div className="flex flex-wrap">
       {ideas.map((idea: Idea) => (
-        <div className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
-          <IdeaCard key={idea.id} idea={idea} />
+        <div key={idea.id} className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-2">
+          <IdeaCard idea={idea} />
         </div>
       ))}
     </div>
