@@ -1,3 +1,4 @@
+import { Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
@@ -9,7 +10,7 @@ export default {
   decorators: [withNextRouter],
 };
 
-const Template = () => <DesktopMenu />;
+const Template: Story = () => <DesktopMenu />;
 
 export const WithActiveLink = Template.bind({});
 
