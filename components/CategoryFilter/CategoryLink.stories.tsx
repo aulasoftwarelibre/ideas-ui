@@ -1,21 +1,23 @@
-import React from "react";
+import { Meta, Story } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import { action } from "@storybook/addon-actions";
-import CategoryLink from "./CategoryLink";
+import CategoryLink, { Props } from './CategoryLink';
 
 export default {
   component: CategoryLink,
   title: "CategoryFilter/CategoryLink",
+} as Meta;
+
+const Template: Story<Props> = (args) => <CategoryLink {...args} />;
+
+export const Selected = Template.bind({});
+Selected.args = {
+  label: "Label",
+  isSelected: true,
 };
 
-export const Selected = () => {
-  return (
-    <CategoryLink label="Label" isSelected={true} onClick={action("click")} />
-  );
-};
-
-export const IsNotSelected = () => {
-  return (
-    <CategoryLink label="Label" isSelected={false} onClick={action("click")} />
-  );
+export const IsNotSelected = Template.bind({});
+IsNotSelected.args = {
+  label: "Label",
+  isSelected: false,
 };

@@ -1,14 +1,12 @@
 module.exports = {
-  globals: {
-    "ts-jest": {
-      tsConfig: "tsconfig.test.json",
-    },
-  },
-  preset: "ts-jest",
-  testEnvironment: "jest-environment-jsdom-fourteen",
-  setupFilesAfterEnv: ["./internal/jest-setup.ts"],
-  testMatch: ["**/__tests__/**/.+(ts|tsx|js)", "**/*.test.+(ts|tsx|js)"],
+  collectCoverageFrom: [
+    "**/*.{js,jsx,ts,tsx}",
+    "!**/*.d.ts",
+    "!**/node_modules/**",
+  ],
+  setupFilesAfterEnv: ["<rootDir>/internal/jest-setup.ts"],
+  testPathIgnorePatterns: ["/node_modules/", "/.next/"],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
   },
 };

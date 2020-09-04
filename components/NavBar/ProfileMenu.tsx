@@ -34,8 +34,8 @@ export const ProfileMenu: React.FunctionComponent<Props> = ({
               >
                 <img
                   className="h-8 w-8 rounded-full"
-                  src={session.user.image ?? "/avatar.svg"}
-                  alt={session.user.name}
+                  src={session?.user?.image ?? "/avatar.svg"}
+                  alt={session?.user?.name}
                 />
               </button>
             </div>

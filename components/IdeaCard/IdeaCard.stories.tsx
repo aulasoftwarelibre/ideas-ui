@@ -1,6 +1,6 @@
+import { Story } from '@storybook/react/types-6-0';
 import faker from 'faker';
 import React from 'react';
-import * as uuid from 'uuid';
 
 import { Idea } from '../../model/idea/idea';
 import IdeaCard, { Props } from './IdeaCard';
@@ -13,7 +13,7 @@ export default {
 const todayDate = Date.now();
 
 const idea: Idea = {
-  id: uuid.v4(),
+  id: faker.random.uuid(),
   slug: "idea-title",
   title: "Idea title",
   group: "Organization",
@@ -24,10 +24,10 @@ const idea: Idea = {
   image: faker.image.technics(),
 };
 
-const Template = (args: Props) => <IdeaCard {...args} />;
+const Template: Story<Props> = (args) => <IdeaCard {...args} />;
 
 export const Default = Template.bind({});
-Default.args = { idea: { ...idea, image: null } };
+Default.args = { idea: { ...idea, image: undefined } };
 
 export const Online = Template.bind({});
 Online.args = { idea: idea };

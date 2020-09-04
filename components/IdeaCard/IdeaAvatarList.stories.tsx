@@ -1,3 +1,4 @@
+import { Story } from '@storybook/react/types-6-0';
 import faker from 'faker';
 import React from 'react';
 
@@ -17,7 +18,7 @@ const avatarAttendees: User[] = [
 ];
 const emptyAvatarAttendees: User[] = [{}, {}, {}, {}];
 
-const Template = (args: Props) => <IdeaAvatarList {...args} />;
+const Template: Story<Props> = (args) => <IdeaAvatarList {...args} />;
 
 export const AvatarAttendees = Template.bind({});
 AvatarAttendees.args = { attendees: avatarAttendees };

@@ -1,2 +1,3 @@
-import IdeaCard from "./IdeaCard";
+import IdeaCard from './IdeaCard';
+
 export default IdeaCard;

@@ -38,6 +38,7 @@ export const SearchBar: React.FunctionComponent<Props> = ({
           placeholder="Buscar eventos i.e web-development"
           onChange={(e) => onChange(e.target.value)}
           data-testid="searchbar-input"
+          value={criteria}
         ></input>
       </div>
     </div>

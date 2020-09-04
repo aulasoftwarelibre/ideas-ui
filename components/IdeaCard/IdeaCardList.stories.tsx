@@ -1,8 +1,9 @@
-import React from "react";
+import { Story } from '@storybook/react/types-6-0';
+import faker from 'faker';
+import React from 'react';
 
-import IdeaCardList, { Props } from "./IdeaCardList";
-import faker from "faker";
-import { Idea } from "../../model/idea/idea";
+import { Idea } from '../../model/idea/idea';
+import IdeaCardList, { Props } from './IdeaCardList';
 
 export const ideas: Idea[] = [...Array(8)].map(() => {
   const title = faker.lorem.sentence();
@@ -29,7 +30,7 @@ export default {
   includeStories: ["Default", "Empty"],
 };
 
-const Template = (args: Props) => <IdeaCardList {...args} />;
+const Template: Story<Props> = (args) => <IdeaCardList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

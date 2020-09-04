@@ -1,3 +1,4 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
@@ -9,7 +10,7 @@ export default {
   component: NavBar,
   title: "Navbar/NavBar",
   decorators: [withNextRouter],
-};
+} as Meta;
 
 const session: Session = {
   user: {
@@ -19,11 +20,11 @@ const session: Session = {
   },
 };
 
-const Template = (args: Props) => <NavBar {...args} />;
+const Template: Story<Props> = (args) => <NavBar {...args} />;
 
 export const DesktopWithoutSession = Template.bind({});
 DesktopWithoutSession.args = {
-  session: null,
+  session: undefined,
 };
 
 export const DesktopWithSession = Template.bind({});
@@ -46,13 +47,11 @@ export const DesktopWithProfile = () => {
 
 export const MobileWithoutSession = Template.bind({});
 MobileWithoutSession.args = {
-  session: null,
+  session: undefined,
 };
-MobileWithoutSession.story = {
-  parameters: {
-    viewport: {
-      defaultViewport: "mobile1",
-    },
+MobileWithoutSession.parameters = {
+  viewport: {
+    defaultViewport: "mobile1",
   },
 };
 
@@ -60,11 +59,9 @@ export const MobileWithSession = Template.bind({});
 MobileWithSession.args = {
   session,
 };
-MobileWithSession.story = {
-  parameters: {
-    viewport: {
-      defaultViewport: "mobile1",
-    },
+MobileWithSession.parameters = {
+  viewport: {
+    defaultViewport: "mobile1",
   },
 };
 

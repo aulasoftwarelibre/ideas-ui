@@ -1,10 +1,13 @@
-import { date } from '@storybook/addon-knobs';
 import Link from 'next/link';
 import React from 'react';
 
-import { menuLinks } from '../../config/links';
+import { NavBarLink } from '../../config/links';
 
-export const Footer: React.FunctionComponent = () => {
+export interface Props {
+  links: NavBarLink[];
+}
+
+export const Footer: React.FunctionComponent<Props> = ({ links }) => {
   return (
     <footer className="footer relative" data-testid="footer">
       <div className="bg-gray-900 text-sm">
@@ -31,7 +34,7 @@ export const Footer: React.FunctionComponent = () => {
                 </span>
                 <div className="flex">
                   <ul className="flex-1">
-                    {menuLinks.map((link) => (
+                    {links.map((link) => (
                       <Link href={link.path} key={link.path}>
                         <li className="mb-1">
                           <a className="text-teal-100 hover:text-white cursor-pointer">

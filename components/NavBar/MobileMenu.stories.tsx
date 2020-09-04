@@ -1,3 +1,4 @@
+import { Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
@@ -14,7 +15,7 @@ export default {
   },
 };
 
-const Template = (args: Props) => <MobileMenu {...args} />;
+const Template: Story<Props> = (args) => <MobileMenu {...args} />;
 
 export const WithoutActiveLink = Template.bind({});
 WithoutActiveLink.args = {

@@ -1,3 +1,4 @@
+import { Story } from '@storybook/react/types-6-0';
 import React from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
@@ -18,7 +19,7 @@ const session: Session = {
   },
 };
 
-const Template = (args: Props) => (
+const Template: Story<Props> = (args) => (
   <div className="mx-auto flex float-right">
     <ProfileMenu {...args} />
   </div>
@@ -53,10 +54,8 @@ OpenWithActiveLink.args = {
   session,
   hideMenu: false,
 };
-OpenWithActiveLink.story = {
-  parameters: {
-    nextRouter: {
-      pathname: "/user/profile",
-    },
+OpenWithActiveLink.parameters = {
+  nextRouter: {
+    pathname: "/user/profile",
   },
 };
