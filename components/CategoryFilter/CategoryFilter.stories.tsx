@@ -1,7 +1,9 @@
-import React from "react";
-import CategoryFilter, { Props } from "./CategoryFilter";
-import faker from "faker";
-import { Category } from "../../model/category/category";
+import { Meta, Story } from '@storybook/react/types-6-0';
+import faker from 'faker';
+import React from 'react';
+
+import { Category } from '../../model/category/category';
+import CategoryFilter, { Props } from './CategoryFilter';
 
 export const categories: Category[] = [
   { label: "Todos", id: faker.random.uuid() },
@@ -17,11 +19,12 @@ export default {
   title: "CategoryFilter/CategoryFilter",
   component: CategoryFilter,
   includeStories: ["Default"],
-};
+} as Meta;
 
-const Template = (args: Props) => <CategoryFilter {...args} />;
+const Template: Story<Props> = (args) => <CategoryFilter {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
   categories: categories,
-};
+  onChangeHandler: (category: Category) => category,
+} as Props;

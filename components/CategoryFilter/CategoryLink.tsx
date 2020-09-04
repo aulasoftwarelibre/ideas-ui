@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-interface Props {
+export interface Props {
   label: string;
   isSelected: Boolean;
-  onClick: (category) => void;
+  onClick: (category: string) => void;
 }
 
 const CategoryLink: React.FunctionComponent<Props> = ({
@@ -25,7 +25,7 @@ const CategoryLink: React.FunctionComponent<Props> = ({
   return (
     <button
       className="text-gray-600 border-b-2 border-transparent tracking-wide text-sm py-3 mr-8"
-      onClick={onClick}
+      onClick={() => onClick(label)}
       data-testid="category-link"
     >
       {label}
