@@ -1,3 +1,4 @@
+import { Story } from '@storybook/react/types-6-0';
 import React from 'react';
 
 import Main from './Main';
@@ -18,7 +19,7 @@ export default {
   },
 };
 
-const Template = (args) => <Main {...args} />;
+const Template: Story = (args) => <Main {...args} />;
 
 export const Default = Template.bind({});
 Default.args = { children: "Hello world" };

@@ -1,6 +1,7 @@
 import { useSession } from 'next-auth/client';
 import React from 'react';
 
+import { menuLinks } from '../../config/links';
 import { Session } from '../../model/user/auth';
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
@@ -18,7 +19,7 @@ export const Layout: React.FunctionComponent<Props> = ({ children }) => {
       <main className="flex flex-col flex-grow overflow-hidden">
         {children}
       </main>
-      <Footer />
+      <Footer links={menuLinks} />
     </div>
   );
 };
