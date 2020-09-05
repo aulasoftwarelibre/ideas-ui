@@ -6,7 +6,7 @@ import { Idea } from '../../model/idea/idea';
 import IdeaCard, { Props } from './IdeaCard';
 
 export default {
-  title: "IdeaCard/IdeaCard",
+  title: 'IdeaCard/IdeaCard',
   component: IdeaCard,
 };
 
@@ -14,10 +14,10 @@ const todayDate = Date.now();
 
 const idea: Idea = {
   id: faker.random.uuid(),
-  slug: "idea-title",
-  title: "Idea title",
-  group: "Organization",
-  category: "Category",
+  slug: 'idea-title',
+  title: 'Idea title',
+  group: 'Organization',
+  category: 'Category',
   startsAt: new Date(todayDate),
   online: true,
   attendees: [{}, {}, {}, {}, {}],

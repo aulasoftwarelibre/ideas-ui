@@ -35,7 +35,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
               <svg
                 data-testid="close-menu"
                 className={classnames(
-                  "h-6 w-6",
+                  'h-6 w-6',
                   { block: hideMenu },
                   { hidden: !hideMenu }
                 )}
@@ -53,7 +53,7 @@ export const NavBar: React.FunctionComponent<Props> = ({ session }) => {
               <svg
                 data-testid="open-menu"
                 className={classnames(
-                  "h-6 w-6",
+                  'h-6 w-6',
                   { hidden: hideMenu },
                   { block: !hideMenu }
                 )}

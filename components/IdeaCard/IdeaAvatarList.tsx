@@ -14,7 +14,7 @@ export const IdeaAvatarList: React.FunctionComponent<Props> = ({
     .map((attendee, index) => (
       <img
         className="-ml-1 first:ml-0 inline-block h-8 w-8 rounded-full text-white shadow-solid"
-        src={attendee.image ?? "/avatar.svg"}
+        src={attendee.image ?? '/avatar.svg'}
         alt=""
         key={index}
       />

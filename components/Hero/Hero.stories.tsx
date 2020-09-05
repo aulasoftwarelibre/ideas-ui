@@ -4,7 +4,7 @@ import Hero from './Hero';
 
 export default {
   component: Hero,
-  title: "MainPage/Hero",
+  title: 'MainPage/Hero',
 };
 
 const Template = () => <Hero />;

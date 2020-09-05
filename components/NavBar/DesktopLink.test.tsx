@@ -5,20 +5,20 @@ import { renderMockRouter } from '../../utils/test-utils';
 import { Props } from './DesktopLink';
 import { Active, Default } from './DesktopLink.stories';
 
-describe("DesktopLink", () => {
-  it("should be rendered correctly", () => {
+describe('DesktopLink', () => {
+  it('should be rendered correctly', () => {
     renderMockRouter(<Default {...(Default.args as Props)} />, {
-      router: { pathname: "/active" },
+      router: { pathname: '/active' },
     });
 
-    expect(screen.getByTestId("desktop-link"));
+    expect(screen.getByTestId('desktop-link'));
   });
 
-  it("should be rendered correctly when current is enabled", () => {
+  it('should be rendered correctly when current is enabled', () => {
     renderMockRouter(<Active {...(Active.args as Props)} />, {
-      router: { pathname: "/active" },
+      router: { pathname: '/active' },
     });
 
-    expect(screen.getByTestId("active-desktop-link"));
+    expect(screen.getByTestId('active-desktop-link'));
   });
 });

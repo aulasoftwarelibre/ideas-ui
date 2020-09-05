@@ -1,12 +1,12 @@
-import { useSession } from 'next-auth/client'
-import React from 'react'
+import { useSession } from 'next-auth/client';
+import React from 'react';
 
-import { menuLinks } from '../../config/links'
-import Footer from '../Footer/Footer'
-import NavBar from '../NavBar/NavBar'
+import { menuLinks } from '../../config/links';
+import Footer from '../Footer/Footer';
+import NavBar from '../NavBar/NavBar';
 
 export const Layout: React.FunctionComponent = ({ children }) => {
-  const [session] = useSession()
+  const [session] = useSession();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -16,7 +16,7 @@ export const Layout: React.FunctionComponent = ({ children }) => {
       </main>
       <Footer links={menuLinks} />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

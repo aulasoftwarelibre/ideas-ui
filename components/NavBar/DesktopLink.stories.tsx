@@ -6,7 +6,7 @@ import DesktopLink, { Props } from './DesktopLink';
 
 export default {
   component: DesktopLink,
-  title: "Navbar/DesktopLink",
+  title: 'Navbar/DesktopLink',
   decorators: [withNextRouter],
 };
 
@@ -14,24 +14,24 @@ const Template: Story<Props> = (args) => <DesktopLink {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: "Groups",
-  path: "/no-active",
+  label: 'Groups',
+  path: '/no-active',
 };
 
 Default.parameters = {
   nextRouter: {
-    pathname: "/active",
+    pathname: '/active',
   },
 };
 
 export const Active = Template.bind({});
 Active.args = {
-  label: "Groups",
-  path: "/active",
+  label: 'Groups',
+  path: '/active',
 };
 
 Active.parameters = {
   nextRouter: {
-    pathname: "/active",
+    pathname: '/active',
   },
 };

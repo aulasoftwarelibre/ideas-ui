@@ -6,7 +6,7 @@ import DesktopMenu from './DesktopMenu';
 
 export default {
   component: DesktopMenu,
-  title: "Navbar/DesktopMenu",
+  title: 'Navbar/DesktopMenu',
   decorators: [withNextRouter],
 };
 
@@ -17,6 +17,6 @@ export const WithActiveLink = Template.bind({});
 export const WithoutActiveLink = Template.bind({});
 WithoutActiveLink.parameters = {
   nextRouter: {
-    pathname: "/no-active",
+    pathname: '/no-active',
   },
 };

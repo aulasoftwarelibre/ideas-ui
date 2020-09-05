@@ -3,7 +3,7 @@ import { RouterContext } from 'next/dist/next-server/lib/router-context';
 import { NextRouter } from 'next/router';
 import React from 'react';
 
-export * from "@testing-library/react";
+export * from '@testing-library/react';
 
 // --------------------------------------------------
 // Override the default test render with our own
@@ -19,10 +19,10 @@ type RenderUI = DefaultParams[0];
 type RenderOptions = DefaultParams[1] & { router?: Partial<NextRouter> };
 
 export const mockRouter: NextRouter = {
-  basePath: "",
-  pathname: "/",
-  route: "/",
-  asPath: "/",
+  basePath: '',
+  pathname: '/',
+  route: '/',
+  asPath: '/',
   query: {},
   push: jest.fn(),
   replace: jest.fn(),

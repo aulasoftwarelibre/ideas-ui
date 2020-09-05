@@ -5,7 +5,7 @@ import { menuLinks } from '../../config/links';
 import Footer, { Props } from './Footer';
 
 export default {
-  title: "Footer/Footer",
+  title: 'Footer/Footer',
   component: Footer,
 } as Meta;
 

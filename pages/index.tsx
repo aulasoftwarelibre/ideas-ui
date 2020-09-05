@@ -1,14 +1,14 @@
-import { NextPage } from 'next'
-import Head from 'next/head'
-import React from 'react'
+import { NextPage } from 'next';
+import Head from 'next/head';
+import React from 'react';
 
-import Hero from '../components/Hero/Hero'
-import IdeaCardList from '../components/IdeaCard/IdeaCardList'
-import Main from '../components/Main/Main'
-import SearchBar from '../components/SearchBar/SearchBar'
+import Hero from '../components/Hero/Hero';
+import IdeaCardList from '../components/IdeaCard/IdeaCardList';
+import Main from '../components/Main/Main';
+import SearchBar from '../components/SearchBar/SearchBar';
 
 const Home: NextPage = () => {
-  const [criteria, setCriteria] = React.useState('')
+  const [criteria, setCriteria] = React.useState('');
 
   return (
     <div>
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         <IdeaCardList ideas={[]} />
       </Main>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

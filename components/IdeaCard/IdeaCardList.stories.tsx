@@ -11,11 +11,11 @@ export const ideas: Idea[] = [...Array(8)].map(() => {
     id: faker.random.uuid(),
     slug: faker.helpers.slugify(title),
     title: title,
-    group: faker.random.arrayElement(["Group A", "Group B", "Group C"]),
+    group: faker.random.arrayElement(['Group A', 'Group B', 'Group C']),
     category: faker.random.arrayElement([
-      "Category A",
-      "Category B",
-      "Category C",
+      'Category A',
+      'Category B',
+      'Category C',
     ]),
     image: faker.image.technics(),
     startsAt: faker.date.future(),
@@ -26,8 +26,8 @@ export const ideas: Idea[] = [...Array(8)].map(() => {
 
 export default {
   component: IdeaCardList,
-  title: "IdeaCard/IdeaCardList",
-  includeStories: ["Default", "Empty"],
+  title: 'IdeaCard/IdeaCardList',
+  includeStories: ['Default', 'Empty'],
 };
 
 const Template: Story<Props> = (args) => <IdeaCardList {...args} />;

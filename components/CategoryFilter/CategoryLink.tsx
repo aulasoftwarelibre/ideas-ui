@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 export interface Props {
-  label: string
-  isSelected: boolean
-  onClick: (category: string) => void
+  label: string;
+  isSelected: boolean;
+  onClick: (category: string) => void;
 }
 
 const CategoryLink: React.FunctionComponent<Props> = ({
@@ -19,7 +19,7 @@ const CategoryLink: React.FunctionComponent<Props> = ({
       >
         {label}
       </span>
-    )
+    );
   }
 
   return (
@@ -30,7 +30,7 @@ const CategoryLink: React.FunctionComponent<Props> = ({
     >
       {label}
     </button>
-  )
-}
+  );
+};
 
-export default CategoryLink
+export default CategoryLink;

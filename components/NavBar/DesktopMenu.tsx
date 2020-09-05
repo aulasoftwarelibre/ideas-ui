@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { menuLinks } from '../../config/links'
-import DesktopLink from './DesktopLink'
+import { menuLinks } from '../../config/links';
+import DesktopLink from './DesktopLink';
 
 export const DesktopMenu: React.FunctionComponent = () => {
   return (
@@ -16,7 +16,7 @@ export const DesktopMenu: React.FunctionComponent = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DesktopMenu
+export default DesktopMenu;

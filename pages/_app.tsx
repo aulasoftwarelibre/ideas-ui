@@ -1,16 +1,16 @@
-import '../styles/index.css'
+import '../styles/index.css';
 
-import { Provider } from 'next-auth/client'
-import { AppProps } from 'next/dist/next-server/lib/router/router'
-import Head from 'next/head'
-import { ReactElement } from 'react'
-import Moment from 'react-moment'
+import { Provider } from 'next-auth/client';
+import { AppProps } from 'next/dist/next-server/lib/router/router';
+import Head from 'next/head';
+import { ReactElement } from 'react';
+import Moment from 'react-moment';
 
-import Layout from '../components/Layout/Layout'
-import { NavBarProvider } from '../state/navbar/NavBarProvider'
+import Layout from '../components/Layout/Layout';
+import { NavBarProvider } from '../state/navbar/NavBarProvider';
 
-Moment.globalLocale = 'es'
-Moment.globalFormat = 'llll'
+Moment.globalLocale = 'es';
+Moment.globalFormat = 'llll';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (
@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps): ReactElement {
         </Layout>
       </NavBarProvider>
     </Provider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

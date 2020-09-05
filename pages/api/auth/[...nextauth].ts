@@ -1,6 +1,6 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import NextAuth, { InitOptions } from 'next-auth'
-import Providers from 'next-auth/providers'
+import { NextApiRequest, NextApiResponse } from 'next';
+import NextAuth, { InitOptions } from 'next-auth';
+import Providers from 'next-auth/providers';
 
 const options = {
   session: {
@@ -21,12 +21,12 @@ const options = {
           name: 'J Smith',
           email: 'jsmith@example.com',
           image: '/avatar.svg',
-        }
+        };
 
         if (user) {
-          return Promise.resolve(user)
+          return Promise.resolve(user);
         } else {
-          return Promise.resolve(null)
+          return Promise.resolve(null);
         }
       },
     }),
@@ -34,7 +34,7 @@ const options = {
 
   // A database is optional, but required to persist accounts in a database
   database: process.env.DATABASE_URL,
-} as InitOptions
+} as InitOptions;
 
 export default (req: NextApiRequest, res: NextApiResponse): Promise<void> =>
-  NextAuth(req, res, options)
+  NextAuth(req, res, options);

@@ -34,14 +34,14 @@ export const ProfileMenu: React.FunctionComponent<Props> = ({
               >
                 <img
                   className="h-8 w-8 rounded-full"
-                  src={session?.user?.image ?? "/avatar.svg"}
+                  src={session?.user?.image ?? '/avatar.svg'}
                   alt={session?.user?.name}
                 />
               </button>
             </div>
             <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg">
               <div
-                className={classnames("py-1 rounded-md bg-white shadow-xs", {
+                className={classnames('py-1 rounded-md bg-white shadow-xs', {
                   hidden: hideMenu,
                 })}
                 role="menu"
