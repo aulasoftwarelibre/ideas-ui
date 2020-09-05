@@ -1,15 +1,14 @@
-import { action } from '@storybook/addon-actions';
-import { Story } from '@storybook/react/types-6-0';
-import React from 'react';
+import { Story } from '@storybook/react/types-6-0'
+import React from 'react'
 
-import { Props, SearchBar } from './SearchBar';
+import { Props, SearchBar } from './SearchBar'
 
 export default {
-  title: "MainPage/SearchBar",
+  title: 'MainPage/SearchBar',
   component: SearchBar,
-};
+}
 
-const Template: Story<Props> = (args) => <SearchBar {...args} />;
+const Template: Story<Props> = (args) => <SearchBar {...args} />
 
-export const Default = Template.bind({});
-Default.args = { criteria: "" };
+export const Default = Template.bind({})
+Default.args = { criteria: '' }

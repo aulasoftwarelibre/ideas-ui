@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import { menuLinks } from '../../config/links';
-import DesktopLink from './DesktopLink';
+import { menuLinks } from '../../config/links'
+import DesktopLink from './DesktopLink'
 
-export const DesktopMenu: React.FunctionComponent = ({}) => {
+export const DesktopMenu: React.FunctionComponent = () => {
   return (
     <div className="hidden sm:block sm:ml-6" data-testid="desktop-menu">
       <div className="flex">
@@ -16,7 +16,7 @@ export const DesktopMenu: React.FunctionComponent = ({}) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DesktopMenu;
+export default DesktopMenu

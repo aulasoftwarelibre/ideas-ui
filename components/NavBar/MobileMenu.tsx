@@ -1,19 +1,19 @@
-import classnames from 'classnames';
-import React from 'react';
+import classnames from 'classnames'
+import React from 'react'
 
-import { mobileLinks } from '../../config/links';
-import MobileLink from './MobileLink';
+import { mobileLinks } from '../../config/links'
+import MobileLink from './MobileLink'
 
 export interface Props {
-  hideMenu: boolean;
+  hideMenu: boolean
 }
 
 export const MobileMenu: React.FunctionComponent<Props> = ({ hideMenu }) => {
-  let state = classnames(
-    "sm:hidden",
+  const state = classnames(
+    'sm:hidden',
     { hidden: hideMenu },
     { block: !hideMenu }
-  );
+  )
 
   return (
     <div className={state} data-testid="mobile-menu">
@@ -27,7 +27,7 @@ export const MobileMenu: React.FunctionComponent<Props> = ({ hideMenu }) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MobileMenu;
+export default MobileMenu

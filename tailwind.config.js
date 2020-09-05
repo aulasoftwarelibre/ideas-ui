@@ -4,6 +4,7 @@ module.exports = {
   purge: ["./components/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       backgroundImage: (theme) => ({
         hero: "url('/assets/hero.svg')",
       }),
@@ -19,7 +20,6 @@ module.exports = {
     borderRadius: {
       none: "0",
       sm: "0.125rem",
-      default: "0.25rem",
       default: "4px",
       md: "0.375rem",
       lg: "0.5rem",
