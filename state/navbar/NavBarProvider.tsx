@@ -3,11 +3,7 @@ import React from 'react';
 import NavBarContext from './NavBarContext';
 import reducer, { initialState } from './NavBarReducer';
 
-interface Props {
-  children: React.ReactNode;
-}
-
-export const NavBarProvider = ({ children }: Props) => {
+export const NavBarProvider: React.FunctionComponent = ({ children }) => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   return (

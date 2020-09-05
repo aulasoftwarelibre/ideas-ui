@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface Props {
   label: string;
-  isSelected: Boolean;
+  isSelected: boolean;
   onClick: (category: string) => void;
 }
 

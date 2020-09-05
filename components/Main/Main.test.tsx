@@ -3,9 +3,9 @@ import React from 'react';
 
 import { Default } from './Main.stories';
 
-describe("Main", () => {
-  it("should contain page components", () => {
+describe('Main', () => {
+  it('should contain page components', () => {
     render(<Default {...Default.args} />);
-    expect(screen.getByTestId("main")).toHaveTextContent("Hello world");
+    expect(screen.getByTestId('main')).toHaveTextContent('Hello world');
   });
 });

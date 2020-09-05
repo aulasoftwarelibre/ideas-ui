@@ -6,7 +6,7 @@ import { User } from '../../model/user/auth';
 import IdeaAvatarList, { Props } from './IdeaAvatarList';
 
 export default {
-  title: "IdeaCard/IdeaAvatarList",
+  title: 'IdeaCard/IdeaAvatarList',
   component: IdeaAvatarList,
 };
 

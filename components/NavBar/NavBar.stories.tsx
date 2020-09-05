@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import { Meta, Story } from '@storybook/react/types-6-0';
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { withNextRouter } from 'storybook-addon-next-router';
 
 import { Session } from '../../model/user/auth';
@@ -8,15 +9,15 @@ import NavBar, { Props } from './NavBar';
 
 export default {
   component: NavBar,
-  title: "Navbar/NavBar",
+  title: 'Navbar/NavBar',
   decorators: [withNextRouter],
 } as Meta;
 
 const session: Session = {
   user: {
-    name: "user",
+    name: 'user',
     image:
-      "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y",
+      'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y',
   },
 };
 
@@ -32,7 +33,7 @@ DesktopWithSession.args = {
   session,
 };
 
-export const DesktopWithProfile = () => {
+export const DesktopWithProfile = (): ReactElement => {
   return (
     <NavBarContext.Provider
       value={{
@@ -51,7 +52,7 @@ MobileWithoutSession.args = {
 };
 MobileWithoutSession.parameters = {
   viewport: {
-    defaultViewport: "mobile1",
+    defaultViewport: 'mobile1',
   },
 };
 
@@ -61,11 +62,11 @@ MobileWithSession.args = {
 };
 MobileWithSession.parameters = {
   viewport: {
-    defaultViewport: "mobile1",
+    defaultViewport: 'mobile1',
   },
 };
 
-export const MobileWithMenu = () => {
+export const MobileWithMenu = (): ReactElement => {
   return (
     <NavBarContext.Provider
       value={{
@@ -81,12 +82,12 @@ export const MobileWithMenu = () => {
 MobileWithMenu.story = {
   parameters: {
     viewport: {
-      defaultViewport: "mobile1",
+      defaultViewport: 'mobile1',
     },
   },
 };
 
-export const MobileWithProfile = () => {
+export const MobileWithProfile = (): ReactElement => {
   return (
     <NavBarContext.Provider
       value={{
@@ -102,7 +103,7 @@ export const MobileWithProfile = () => {
 MobileWithProfile.story = {
   parameters: {
     viewport: {
-      defaultViewport: "mobile1",
+      defaultViewport: 'mobile1',
     },
   },
 };

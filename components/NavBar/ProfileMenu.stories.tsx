@@ -7,15 +7,15 @@ import ProfileMenu, { Props } from './ProfileMenu';
 
 export default {
   component: ProfileMenu,
-  title: "Navbar/ProfileMenu",
+  title: 'Navbar/ProfileMenu',
   decorators: [withNextRouter],
 };
 
 const session: Session = {
   user: {
-    name: "user",
+    name: 'user',
     image:
-      "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y",
+      'https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?f=y',
   },
 };
 
@@ -56,6 +56,6 @@ OpenWithActiveLink.args = {
 };
 OpenWithActiveLink.parameters = {
   nextRouter: {
-    pathname: "/user/profile",
+    pathname: '/user/profile',
   },
 };

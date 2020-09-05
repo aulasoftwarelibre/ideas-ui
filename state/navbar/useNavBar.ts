@@ -2,11 +2,11 @@ import React from 'react';
 
 import NavBarContext from './NavBarContext';
 import {
-    SWITCH_MENU_VISIBILITY,
-    SWITCH_PROFILE_VISIBILITY,
+  SWITCH_MENU_VISIBILITY,
+  SWITCH_PROFILE_VISIBILITY,
 } from './NavBarTypes';
 
-export const useNavBar = () => {
+export const useNavBar = (): any => {
   const {
     state: { hideMenu, hideProfile },
     dispatch,

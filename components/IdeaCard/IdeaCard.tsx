@@ -10,7 +10,7 @@ export interface Props {
 }
 
 export const IdeaCard: React.FunctionComponent<Props> = ({ idea }) => {
-  const ideaImage = idea.image ?? "/ideas-banner.png";
+  const ideaImage = idea.image ?? '/ideas-banner.png';
 
   return (
     <div

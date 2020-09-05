@@ -2,15 +2,10 @@ import { useSession } from 'next-auth/client';
 import React from 'react';
 
 import { menuLinks } from '../../config/links';
-import { Session } from '../../model/user/auth';
 import Footer from '../Footer/Footer';
 import NavBar from '../NavBar/NavBar';
 
-interface Props {
-  session: Session;
-}
-
-export const Layout: React.FunctionComponent<Props> = ({ children }) => {
+export const Layout: React.FunctionComponent = ({ children }) => {
   const [session] = useSession();
 
   return (

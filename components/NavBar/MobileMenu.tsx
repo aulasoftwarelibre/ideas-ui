@@ -9,8 +9,8 @@ export interface Props {
 }
 
 export const MobileMenu: React.FunctionComponent<Props> = ({ hideMenu }) => {
-  let state = classnames(
-    "sm:hidden",
+  const state = classnames(
+    'sm:hidden',
     { hidden: hideMenu },
     { block: !hideMenu }
   );

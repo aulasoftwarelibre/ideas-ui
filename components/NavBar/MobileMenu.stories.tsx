@@ -6,11 +6,11 @@ import MobileMenu, { Props } from './MobileMenu';
 
 export default {
   component: MobileMenu,
-  title: "Navbar/MobileMenu",
+  title: 'Navbar/MobileMenu',
   decorators: [withNextRouter],
   parameters: {
     viewport: {
-      defaultViewport: "mobile1",
+      defaultViewport: 'mobile1',
     },
   },
 };
@@ -23,7 +23,7 @@ WithoutActiveLink.args = {
 };
 WithoutActiveLink.parameters = {
   nextRouter: {
-    pathname: "/user/profile",
+    pathname: '/user/profile',
   },
 };
 

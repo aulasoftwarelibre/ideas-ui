@@ -1,4 +1,3 @@
-import faker from 'faker';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -9,7 +8,7 @@ import Main from '../components/Main/Main';
 import SearchBar from '../components/SearchBar/SearchBar';
 
 const Home: NextPage = () => {
-  const [criteria, setCriteria] = React.useState("");
+  const [criteria, setCriteria] = React.useState('');
 
   return (
     <div>
