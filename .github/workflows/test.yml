@@ -1,6 +1,6 @@
 name: Testing
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   test:
@@ -23,4 +23,4 @@ jobs:
           restore-keys: ${{ runner.os }}-yarn-
 
       - run: yarn install --frozen-lockfile
-      - run: yarn run test
+      - run: yarn run test-all
